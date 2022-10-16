@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export const Menu = () => {
     return (
@@ -9,12 +10,12 @@ export const Menu = () => {
                 atender todos os tipos de gostos e ocasiões! Mais do que boas opções e preços justos,
                 queremos estar presentes nos momentos mais especiais da sua vida!</p>
             <div className="d-flex justify-content-center gap-5">
-                <img width={120} src="https://vinum-wine.s3.amazonaws.com/bgCatalogo.svg" className="img-fluid" />
-                <img width={120} src="https://vinum-wine.s3.amazonaws.com/bgCatalogo.svg" className="img-fluid" />
+                <img width={120} src="https://vinum-wine.s3.amazonaws.com/bgCatalogo.svg" className="img-fluid" alt="vinum catalogo " />
+                <img width={120} src="https://vinum-wine.s3.amazonaws.com/bgCatalogo.svg" className="img-fluid" alt="vinum catalogo " />
             </div>
 
             <div className="d-flex justify-content-center pt-3 bg-transparent">
-                <button>VER CATÁLOGO</button>
+            <Link to="/catalogoPage"><button>VER CATÁLOGO</button></Link>
             </div>
         </section>
     )

@@ -4,6 +4,8 @@ import { Menu } from "./Menu";
 import { Promos } from './Promos';
 import { Footer } from './Footer';
 
+
+
 export const Main = () => {
     return (
         <>
