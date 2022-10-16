@@ -2,10 +2,9 @@ import React from "react";
 
 export const Wine = () => {
     return (
-        <section className="container">
+        <section className="container d-flex justify-content-center">
             <h1 className="d=flex justify-content-center">Vinho Tinto Oops</h1>
             <img width={150} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" />
-            <p>Vinho tinto Oops</p>
             <h3 className='text-decoration-line-through'>De 199,00</h3>
             <p>Por 89,99</p>
             <button>Comprar</button>

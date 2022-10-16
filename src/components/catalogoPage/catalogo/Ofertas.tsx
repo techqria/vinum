@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Ofertas = () => {
     return (
@@ -13,7 +14,7 @@ export const Ofertas = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <div className="d-flex flex-column align-items-center justify-content-center">
-                            <img width={150} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" />
+                            <img width={150} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg"><Link to="/inside"></Link></img>
                             <p>Vinho tinto Oops</p>
                             <h3 className='text-decoration-line-through'>De 199,00</h3>
                             <p>Por 89,99</p>
