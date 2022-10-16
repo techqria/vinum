@@ -28,6 +28,9 @@ h1::after {
   width: 4px;
   height: 6px;
 }
+.ofertas h2{
+  color: #A71830;
+}
 
 button{
   border: 1px solid var(--gold);
@@ -90,3 +93,6 @@ button{
     transform: rotate(360deg);
   }
 }
+
+
+

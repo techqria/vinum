@@ -7,8 +7,6 @@ import { Catalogo } from "./components/catalogoPage/Catalogo";
 function App() {
   return (
     <>
-    <Main />
-
     <Router>
     <Routes>
         <Route>

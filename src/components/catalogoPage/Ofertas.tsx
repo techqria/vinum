@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-export const Promos = () => {
+export const Ofertas = () => {
     return (
-        <section className="container mt-5 mb-5 text-center">
-            <h1 className='pb-2 position-relative'>OFERTAS DA SEMANA</h1>
+        <section className="container mt-5">
+            <h1 className="d-flex justify-content-center pb-2 position-relative">Catálogo</h1>
+            <br></br>
+            <div className="ofertas container d-flex justify-content-center">
+                <h2>Melhores Ofertas</h2>
+            </div>
+
             <div id="carouselPromos" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -32,6 +37,7 @@ export const Promos = () => {
                     <i className="fa-solid fa-arrow-right text-red fw-bold fs-2"></i>
                 </button>
             </div>
+
         </section>
     )
 }

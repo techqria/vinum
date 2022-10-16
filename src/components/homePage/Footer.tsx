@@ -2,8 +2,8 @@ import React from "react";
 
 export const Footer = () => {
     return (
-        <section className=" border border-warning">
-        <footer>
+        <section className="border border-warning">
+        <footer className="container">
             <ul>
                 <li><b>QRIATECH</b></li>
                 <li><u>Contate-nos</u></li>

@@ -15,7 +15,7 @@ export const Menu = () => {
             </div>
 
             <div className="d-flex justify-content-center pt-3 bg-transparent">
-            <Link to="/catalogoPage"><button>VER CATÁLOGO</button></Link>
+            <Link to="/catalogo"><button>VER CATÁLOGO</button></Link>
             </div>
         </section>
     )
