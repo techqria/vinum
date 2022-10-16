@@ -20,7 +20,7 @@ export const Navbar = () => {
                             <Link to="/"  style={{color: '#A71830', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'sans-serif'}}>Página Inicial</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/"  style={{color: '#A71830', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'sans-serif'}}>Catálogo</Link>
+                            <Link to="/catalogo"  style={{color: '#A71830', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'sans-serif'}}>Catálogo</Link>
                         </li>
                     </ul>
                 </div>
