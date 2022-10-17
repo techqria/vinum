@@ -2,14 +2,16 @@ import React from "react";
 import { Ofertas } from "./Ofertas";
 import { Footer } from "../../homePage/Footer";
 import { Navbar } from "./Navbar";
-import { Rest } from "../wines/pagination"
+import { Pagination } from "../wines/pagination"
+import { Wines } from "../wines/wines"
 
 export const Catalogo = () => {
     return (
         <>  
             <Navbar />
             <Ofertas />
-            <Rest />
+            <Pagination />
+            <Wines />
             <Footer />
         </>
     )

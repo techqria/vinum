@@ -10,7 +10,7 @@ export const Ofertas = () => {
             <div className="ofertas container d-flex justify-content-center">
                 <h2>Melhores Ofertas</h2>
             </div>
-            
+
             <br></br>
             <br></br>
 
@@ -20,18 +20,18 @@ export const Ofertas = () => {
 
                         <div className="d-flex justify-content-around">
                             <div className="d-flex flex-column justify-content-center">
-                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
-                                <p>Vinho tinto Oops</p>
-                                <h3 className='text-decoration-line-through'>De 199,00</h3>
-                                <p>Por 89,99</p>
-                                <button>APROVEITAR</button>
+                                <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" /></Link>
+                                <p>Catena Chardonnay</p>
+                                <h3 className='text-decoration-line-through'>De 181,02</h3>
+                                <p>Por 149,00</p>
+                                <button>COMPRAR</button>
                             </div>
                             <div className="d-flex flex-column justify-content-center">
-                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
-                                <p>Vinho tinto Oops</p>
-                                <h3 className='text-decoration-line-through'>De 199,00</h3>
-                                <p>Por 89,99</p>
-                                <button>APROVEITAR</button>
+                                <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" /></Link>
+                                <p>Catena Chardonnay</p>
+                                <h3 className='text-decoration-line-through'>De 181,02</h3>
+                                <p>Por 149,00</p>
+                                <button>COMPRAR</button>
                             </div>
                         </div>
                     </div>
@@ -39,18 +39,18 @@ export const Ofertas = () => {
 
                         <div className="d-flex justify-content-around">
                             <div className="d-flex flex-column justify-content-center">
-                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
-                                <p>Vinho tinto Oops</p>
-                                <h3 className='text-decoration-line-through'>De 199,00</h3>
-                                <p>Por 89,99</p>
-                                <button>APROVEITAR</button>
+                                <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" /></Link>
+                                <p>Catena Chardonnay</p>
+                                <h3 className='text-decoration-line-through'>De 181,02</h3>
+                                <p>Por 149,00</p>
+                                <button>COMPRAR</button>
                             </div>
                             <div className="d-flex flex-column justify-content-center">
-                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
-                                <p>Vinho tinto Oops</p>
+                                <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" /></Link>
+                                <p>Catena Chardonnay</p>
                                 <h3 className='text-decoration-line-through'>De 199,00</h3>
                                 <p>Por 89,99</p>
-                                <button>APROVEITAR</button>
+                                <button>COMPRAR</button>
                             </div>
                         </div>
                     </div>

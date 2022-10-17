@@ -11,7 +11,7 @@ export const Menu = () => {
                 queremos estar presentes nos momentos mais especiais da sua vida!</p>
             <div className="d-flex justify-content-center gap-5">
                 <img width={120} src="https://vinum-wine.s3.amazonaws.com/bgCatalogo.svg" className="img-fluid" alt="vinum catalogo " />
-                <img width={120} src="https://vinum-wine.s3.amazonaws.com/bgCatalogo.svg" className="img-fluid" alt="vinum catalogo " />
+                <img width={120} src="https://vinum-wine.s3.amazonaws.com/Catalogo/NossoCatalogo2.png" className="img-fluid" alt="vinum catalogo " />
             </div>
 
             <div className="d-flex justify-content-center pt-3 bg-transparent">

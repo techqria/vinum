@@ -9,17 +9,17 @@ export const Promos = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
 
-                        <div className="d-flex justify-content-around">
+                        <div className="d-flex justify-content-around mt-5">
                             <div className="d-flex flex-column justify-content-center">
-                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
-                                <p>Vinho tinto Oops</p>
+                                <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" /></Link>
+                                <p>Catena Chardonnay</p>
                                 <h3 className='text-decoration-line-through'>De 199,00</h3>
                                 <p>Por 89,99</p>
                                 <button>APROVEITAR</button>
                             </div>
                             <div className="d-flex flex-column justify-content-center">
-                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
-                                <p>Vinho tinto Oops</p>
+                                <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" /></Link>
+                                <p>Catena Chardonnay</p>
                                 <h3 className='text-decoration-line-through'>De 199,00</h3>
                                 <p>Por 89,99</p>
                                 <button>APROVEITAR</button>
@@ -28,17 +28,17 @@ export const Promos = () => {
                     </div>
                     <div className="carousel-item active">
 
-                        <div className="d-flex justify-content-around">
+                        <div className="d-flex justify-content-around mt-5">
                             <div className="d-flex flex-column justify-content-center">
-                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
-                                <p>Vinho tinto Oops</p>
+                                <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" /></Link>
+                                <p>Catena Chardonnay</p>
                                 <h3 className='text-decoration-line-through'>De 199,00</h3>
                                 <p>Por 89,99</p>
                                 <button>APROVEITAR</button>
                             </div>
                             <div className="d-flex flex-column justify-content-center">
-                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
-                                <p>Vinho tinto Oops</p>
+                                <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" /></Link>
+                                <p>Catena Chardonnay</p>
                                 <h3 className='text-decoration-line-through'>De 199,00</h3>
                                 <p>Por 89,99</p>
                                 <button>APROVEITAR</button>
