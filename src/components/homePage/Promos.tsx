@@ -8,24 +8,45 @@ export const Promos = () => {
             <div id="carouselPromos" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <div className="d-flex flex-column align-items-center justify-content-center">
-                            <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
-                            <p>Vinho tinto Oops</p>
-                            <h3 className='text-decoration-line-through'>De 199,00</h3>
-                            <p>Por 89,99</p>
-                            <button>APROVEITAR</button>
+
+                        <div className="d-flex justify-content-around">
+                            <div className="d-flex flex-column justify-content-center">
+                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
+                                <p>Vinho tinto Oops</p>
+                                <h3 className='text-decoration-line-through'>De 199,00</h3>
+                                <p>Por 89,99</p>
+                                <button>APROVEITAR</button>
+                            </div>
+                            <div className="d-flex flex-column justify-content-center">
+                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
+                                <p>Vinho tinto Oops</p>
+                                <h3 className='text-decoration-line-through'>De 199,00</h3>
+                                <p>Por 89,99</p>
+                                <button>APROVEITAR</button>
+                            </div>
                         </div>
                     </div>
-                    <div className="carousel-item">
-                        <div className="d-flex flex-column align-items-center justify-content-center">
-                            <img width={150} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" />
-                            <p>Vinho tinto Oops</p>
-                            <h3 className='text-decoration-line-through'>De 199,00</h3>
-                            <p>Por 89,99</p>
-                            <button>APROVEITAR</button>
+                    <div className="carousel-item active">
+
+                        <div className="d-flex justify-content-around">
+                            <div className="d-flex flex-column justify-content-center">
+                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
+                                <p>Vinho tinto Oops</p>
+                                <h3 className='text-decoration-line-through'>De 199,00</h3>
+                                <p>Por 89,99</p>
+                                <button>APROVEITAR</button>
+                            </div>
+                            <div className="d-flex flex-column justify-content-center">
+                                <Link to="/inside"><img width={75} src="https://vinum-wine.s3.amazonaws.com/garrafaVinho.svg" alt="garrafaVinho.svg" /></Link>
+                                <p>Vinho tinto Oops</p>
+                                <h3 className='text-decoration-line-through'>De 199,00</h3>
+                                <p>Por 89,99</p>
+                                <button>APROVEITAR</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselPromos" data-bs-slide="prev">
                     <i className="text-red fw-bold fs-2 fa-solid fa-arrow-left"></i>
                 </button>

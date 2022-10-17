@@ -10,6 +10,7 @@ export const Ofertas = () => {
             <div className="ofertas container d-flex justify-content-center">
                 <h2>Melhores Ofertas</h2>
             </div>
+            
             <br></br>
             <br></br>
 
