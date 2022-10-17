@@ -26,7 +26,6 @@ export const Wine = () => {
             <p><b>Uvas</b><p>Uvas provenientes de 4 vinhedos, Agrelo, Villa Bastias, Gualtallary e El Cepillo</p></p>
             <p><b>Teor Alcólico</b><p>13,5%</p></p>
             <p><b>Safra</b><p>2020</p></p>
-            <p><b>Harmonização</b><p>Carnes, massas com molho branco, massas folhadas</p></p>
 
         </section>
     )
