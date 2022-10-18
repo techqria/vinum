@@ -33,6 +33,13 @@ export const Ofertas = () => {
                                 <p>Por 149,00</p>
                                 <button>COMPRAR</button>
                             </div>
+                            <div className="d-flex flex-column justify-content-center">
+                                <Link to="/inside"><img width={150} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" /></Link>
+                                <p>Catena Chardonnay</p>
+                                <h3 className='text-decoration-line-through'>De 181,02</h3>
+                                <p>Por 149,00</p>
+                                <button>COMPRAR</button>
+                            </div>
                         </div>
                     </div>
                     <div className="carousel-item active">
