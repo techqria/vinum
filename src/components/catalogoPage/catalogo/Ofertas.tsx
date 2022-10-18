@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Ofertas = () => {
     return (
-        <section className="mt-5">
+        <section className="">
             <h1 className="d-flex justify-content-center pb-2 position-relative">Catálogo</h1>
             <br></br>
 

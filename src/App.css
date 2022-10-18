@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -43,17 +48,19 @@ button{
 .right-20 {
   right: 20px !important;
 }
-
-
+.header{
+ 
+}
 .bg-header {
   background: url('https://vinum-wine.s3.amazonaws.com/bgHeader.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500px;
+  
 }
 .subheader{
   background-color: var(--gold);
-  width: 20%;
 }
 
 .h-100vh {
@@ -120,7 +127,7 @@ body {
 }
 
 .bm-burger-bars {
-  background: #FFFFFF;
+  background: #a82c41;
 }
 
 .bm-cross-button {
@@ -133,7 +140,7 @@ body {
 }
 
 .bm-menu {
-  background: #373a47;
+  background: #a82c41;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -149,5 +156,21 @@ body {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+.card-title{
+  margin-left: 20%;
+}
+.card-text{
+  margin-top: 20%;
+  margin-left: 20%;
+}
+.card-img{
+  padding-top: 0%;
+}
+.insideCard{
+  margin-top: 20%;
+  margin-left: 50%;
+}
+
+
 
 
