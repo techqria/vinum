@@ -2,7 +2,7 @@ import React from "react";
 
 export const Wine = () => {
     return (
-        <section className="container mt-5 mb-5 text-center">
+        <section className="container  mb-5 text-center">
             <h1 className='pb-2 position-relative'>Catena Chardonnay 2020</h1>
             <div className="d-flex flex-column align-items-center justify-content-center">
                 <img width={250} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" />

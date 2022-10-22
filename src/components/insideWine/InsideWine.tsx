@@ -1,12 +1,12 @@
 import React from "react";
-import { Navbar } from "./Navbar"
 import { Wine } from "./Wine"
 import { Footer } from "../homePage/Footer";
+import Sidebar from "./sidebar";
 
 export const Inside = () => {
     return(
    <>
-    <Navbar />
+    <Sidebar />
     <Wine />
     <Footer />
    </>     
