@@ -33,10 +33,9 @@ export const Promos = () => {
                                         <div key={index} className="d-flex flex-column justify-content-center">
                                             <Link to="/inside"><img width={150} src={wine.image} alt="garrafaVinho.svg" /></Link>
                                             <p>{wine.name}</p>
-                                            <h3 className='text-decoration-line-through'></h3>
-                                            <p></p>
+                                            <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
+                                            <p>Por R$ {wine.sale}</p>
                                             <button>APROVEITAR</button>
-
                                         </div>
                                     )
                                 }
@@ -46,6 +45,23 @@ export const Promos = () => {
                         </div>
                     </div>
                     <div className="carousel-item active">
+                        <div className="d-flex justify-content-around mt-5">
+                            {
+                                wines.map((wine, index) => {
+                                    return (
+                                        <div key={index} className="d-flex flex-column justify-content-center">
+                                            <Link to="/inside"><img width={150} src={wine.image} alt="garrafaVinho.svg" /></Link>
+                                            <p>{wine.name}</p>
+                                            <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
+                                            <p>Por R$ {wine.sale}</p>
+                                            <button>APROVEITAR</button>
+                                        </div>
+                                    )
+                                }
+                                )
+                            }
+
+                        </div>
                     </div>
                 </div>
 

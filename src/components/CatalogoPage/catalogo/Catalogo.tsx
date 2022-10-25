@@ -1,6 +1,6 @@
 import React from "react";
 import { Ofertas } from "./Ofertas";
-import { Footer } from "../../homePage/Footer";
+import { Footer } from "../../HomePage/Footer";
 import { Pagination } from "../wines/pagination"
 import { Wines } from "../wines/wines"
 import  Sidebar  from "./Sidebar";
