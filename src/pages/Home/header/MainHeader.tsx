@@ -1,5 +1,5 @@
-import Header  from './header';
-import SideBar from './sidebar';
+import Header  from './Header';
+import SideBar from './Sidebar';
 
 export const MainHeader = () => {
     return (

@@ -1,32 +1,27 @@
 import React, { useEffect, useState } from "react";
 import './App.css';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import { Main } from "./components/HomePage/Main";
-import { Catalogo } from "./components/CatalogoPage/catalogo/Catalogo";
+import { Main } from "./pages/Home/Main";
+import { Catalogo } from "./pages/Catalogo/catalogo/Catalogo";
 import { Inside } from "./components/InsideWine/InsideWine";
-import { Admin } from "./components/Admin/admin";
+import { Admin } from "./pages/Admin/Admin";
 import Cart from "./components/Cart/pages/Cart";
-import Home from "./components/Cart/pages/Home";
-import CartProvider from "./components/Cart/context/cart";
-import ThemeProvider from "./components/Cart/context/theme";
-
-
-
+import { NewProduct } from "./pages/Admin/NewProduct";
 
 function App() {
   return (
     <>
-    <Router>
-    <Routes>
-        <Route>
-           <Route path="/" element={<Main />}/>
-           <Route path="/catalogo" element={<Catalogo />} />
-           <Route path="/inside" element={<Inside />} />
-           <Route path="/admin" element={<Admin />} />
-           <Route path="/cart" element={<Cart />} />
-       </Route>
-    </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/catalogo" element={<Catalogo />} />
+          <Route path="/inside" element={<Inside />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/novo-produto" element={<NewProduct />} />
+
+        </Routes>
+      </Router>
     </>
 
   );

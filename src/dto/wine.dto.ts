@@ -7,7 +7,6 @@ export interface WineDto{
     region: string;
     vol: string;
     coloration: string;
-    grapes: string;
     alcohol: string;
     year: string;
     description: string;

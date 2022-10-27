@@ -3,6 +3,7 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
+
 .App {
   text-align: center;
 }
@@ -33,11 +34,12 @@ h1::after {
   width: 4px;
   height: 6px;
 }
-.ofertas h2{
+
+.ofertas h2 {
   color: #A71830;
 }
 
-button{
+button {
   border: 1px solid var(--gold);
 }
 
@@ -48,18 +50,19 @@ button{
 .right-20 {
   right: 20px !important;
 }
-.header{
- 
-}
+
+.header {}
+
 .bg-header {
   background: url('https://vinum-wine.s3.amazonaws.com/bgHeader.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
-  
+
 }
-.subheader{
+
+.subheader {
   background-color: var(--gold);
 }
 
@@ -96,6 +99,7 @@ button{
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -156,17 +160,21 @@ body {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-.card-title{
+
+.card-title {
   margin-left: 20%;
 }
-.card-text{
+
+.card-text {
   margin-top: 20%;
   margin-left: 20%;
 }
-.card-img{
+
+.card-img {
   padding-top: 0%;
 }
-.insideCard{
+
+.insideCard {
   margin-top: 20%;
   margin-left: 50%;
 }
@@ -187,5 +195,17 @@ body {
   margin-bottom: 5px;
 }
 
+#adminpage {
+  background-color: #373a47;
+}
 
-
+.btn-outline-gold {
+  background-color: transparent;
+  border: 1px solid #DD9F31 !important;
+}
+  .btn-outline-gold :focus,
+  .btn-outline-gold :hover,
+  .btn-outline-gold :active {
+    background-color: rgba(#DD9F31) !important;
+  
+}
