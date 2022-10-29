@@ -2,8 +2,8 @@ import React from "react";
 import { MainHeader } from './header/MainHeader';
 import { Menu } from "./Menu";
 import { Promos } from './Promos';
-import { Footer } from './Footer';
 import Cards from "./Cards"
+import Footer from "../../components/footer";
 
 
 

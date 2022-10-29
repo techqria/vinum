@@ -1,4 +1,5 @@
 export interface WineDto{
+    _id?: string;
     name: string;
     price: string;
     sale: string;

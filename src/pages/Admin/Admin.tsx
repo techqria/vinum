@@ -4,8 +4,8 @@ import React from "react";
 
 export const Admin = () => {
     return (
-    
-          <Main />
- 
+        <div className="bg-dark h-100vh">
+            <Main />
+        </div>
     )
 } 

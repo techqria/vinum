@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -51,18 +63,15 @@ button {
   right: 20px !important;
 }
 
-.header {}
-
 .bg-header {
   background: url('https://vinum-wine.s3.amazonaws.com/bgHeader.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
-
 }
 
-.subheader {
+.bg-gold {
   background-color: var(--gold);
 }
 
@@ -193,10 +202,6 @@ body {
   justify-content: space-between;
   padding: 0 10px;
   margin-bottom: 5px;
-}
-
-#adminpage {
-  background-color: #373a47;
 }
 
 .btn-outline-gold {

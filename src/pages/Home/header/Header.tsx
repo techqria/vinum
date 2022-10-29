@@ -9,16 +9,15 @@ export default function Header() {
                     <h2 className="pt-5 pb-5 text-center fw-light fst-italic">A maior revenda de vinhos de Brasília e região</h2>
                 </div>
             </section>
-            <div className="subheader w-100 d-flex justify-content-center">
-
-                <div className="d-flex me-5 pt-3">
+            <div className="bg-gold w-100 d-flex justify-content-center align-items-center gap-2 pt-3 pb-3">
+                <div className="d-flex justify-content-center align-items-center">
                     <i className="fa-solid fa-truck pe-1"></i>
-                    <p className="">Entrega <b>GRÁTIS</b> em todo o Distrito Federal</p>
+                    <p className="p-0 m-0 ">Entrega <b>GRÁTIS</b> em todo DF</p>
                 </div>
 
-                <div className="d-flex pt-3">
+                <div className="d-flex justify-content-center align-items-center">
                     <i className="fa-solid fa-credit-card me-1 pe-1"></i>
-                    <p className="">Pagamento 100% <b>SEGURO</b></p>
+                    <p className="p-0 m-0">Pagamento 100% <b>SEGURO</b></p>
                 </div>
             </div>
         </>

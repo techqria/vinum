@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Main = () => {
     return (
-
-        <section id="adminpage" className="d-flex flex-column gap-5 justify-content-center align-items-center">
+        <section className="pb-5 bg-dark d-flex flex-column gap-5 justify-content-center align-items-center">
             <img className="mb-4 mt-4 img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo-header.svg" />
 
             <div className="row d-flex justify-content-around  w-100">
