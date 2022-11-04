@@ -54,7 +54,7 @@ export const NewProduct = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Preço</label>
+                                <label htmlFor="" className="form-label text-white">Preço(em R$ com duas casas decimais)</label>
                                 <input id="price" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
@@ -64,13 +64,13 @@ export const NewProduct = () => {
                         <div className="col-md-6">
 
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Desconto</label>
+                                <label htmlFor="" className="form-label text-white">Preço com Desconto</label>
                                 <input id="sale" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Categoria</label>
+                                <label htmlFor="" className="form-label text-white">Categoria (Ex: espumante, seco, suave)</label>
                                 <input id="category" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
@@ -95,13 +95,13 @@ export const NewProduct = () => {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Quantidade</label>
+                                <label htmlFor="" className="form-label text-white">Quantidade (ml)</label>
                                 <input id="vol" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Coloração</label>
+                                <label htmlFor="" className="form-label text-white">Coloração (Ex: tinto, branco, rose)</label>
                                 <input id="coloration" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
@@ -116,7 +116,7 @@ export const NewProduct = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Teor Alcólico</label>
+                                <label htmlFor="" className="form-label text-white">Teor Alcólico (%)</label>
                                 <input id="alcohol" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
