@@ -1,5 +1,5 @@
 import React from "react";
-import { MainHeader } from './header/MainHeader';
+import { MainHeader } from '../../components/header/MainHeader';
 import { Menu } from "./Menu";
 import { Promos } from './Promos';
 import Cards from "./Cards"

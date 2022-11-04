@@ -16,6 +16,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.mh-300 {
+  max-height: 300px;
+}
+
+.top-10 {
+  top: 10px;
+}
+
 .App {
   text-align: center;
 }
@@ -162,12 +174,32 @@ body {
   fill: #373a47;
 }
 
+.btn-gold {
+  border: 1px solid var(--gold);
+  transition: .3s ease;
+}
+
+.btn-gold:hover {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  transform: scale(1.04);
+}
+
 .bm-item-list {
   color: #b8b7ad;
 }
 
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.card-group div { 
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.card-group div:hover { 
+  transform: scale(1.04);
 }
 
 .card-title {
@@ -177,10 +209,6 @@ body {
 .card-text {
   margin-top: 20%;
   margin-left: 20%;
-}
-
-.card-img {
-  padding-top: 0%;
 }
 
 .insideCard {
