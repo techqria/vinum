@@ -6,6 +6,9 @@ export default props => {
     return (
         <Menu>
             <ul className="navbar-nav">
+            <li className="nav-item">
+                    <Link to="/" style={{ color: '#FFFFFF', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'sans-serif' }}>Página Inicial</Link>
+                </li>
                 <li className="nav-item">
                     <Link to="/catalogo" style={{ color: '#FFFFFF', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'sans-serif' }}>Nosso Catálogo</Link>
                 </li>
