@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPriceFilter, priceFilter }) => {
 
     const filterCategory = (e: any) => {
@@ -13,16 +15,15 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
 
     }
     const filterPrice = (e: any) => {
-        if (categoryFilter.find((categoy: any) => categoy == e.target.id)) {
-            const remove = [...categoryFilter];
+        if (priceFilter.find((categoy: any) => categoy == e.target.id)) {
+            const remove = [...priceFilter];
 
-            const index = categoryFilter.indexOf(e.target.id)
+            const index = priceFilter.indexOf(e.target.id)
 
             remove.splice(index, 1)
 
-            setCategoryFilter(remove)
-        } else setCategoryFilter((categoryFilter: any) => [...categoryFilter, e.target.id]);
-
+            setPriceFilter(remove)
+        } else setPriceFilter((priceFilter: any) => [...priceFilter, e.target.id]);
     }
 
     return (
@@ -54,20 +55,20 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                         Filtrar por preço <i className="fa-solid fa-arrow-down-long"></i>
                 </div>
                 <div className="mb-3 d-flex">
-                    <label htmlFor="branco" className="me-1 pointer">$50 - $100</label>
-                    <input className="pointer" onChange={filterCategory} type="checkbox" id="50" />
+                    <label htmlFor="50" className="me-1 pointer">$50 - $100</label>
+                    <input className="pointer" onChange={filterPrice} type="checkbox" id="50" />
                 </div>
                 <div className="mb-3 d-flex">
-                    <label htmlFor="rose" className="me-1 pointer">$100 - $150</label>
-                    <input className="pointer" onChange={filterCategory} type="checkbox" id="100" />
+                    <label htmlFor="100" className="me-1 pointer">$100 - $150</label>
+                    <input className="pointer" onChange={filterPrice} type="checkbox" id="100" />
                 </div>
                 <div className="mb-3 d-flex">
-                    <label htmlFor="tinto" className="me-1 pointer">$150 - $200</label>
-                    <input className="pointer" onChange={filterCategory} type="checkbox" id="150" />
+                    <label htmlFor="150" className="me-1 pointer">$150 - $200</label>
+                    <input className="pointer" onChange={filterPrice} type="checkbox" id="150" />
                 </div>
                 <div className="mb-3 d-flex">
-                    <label htmlFor="espumante" className="me-1 pointer">$200 ++ </label>
-                    <input className="pointer" onChange={filterCategory} type="checkbox" id="200" />
+                    <label htmlFor="200" className="me-1 pointer">$200 ++ </label>
+                    <input className="pointer" onChange={filterPrice} type="checkbox" id="200" />
                 </div>
 
             </div>

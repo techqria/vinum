@@ -30,7 +30,7 @@ export const Wines = () => {
             <div className="row d-flex gap-5 justify-content-center">
                 {
                     wines.map((wine, index) => {
-                        if (categoryFilter.find(category => category == wine.category) || categoryFilter.length == 0) {
+                        if (categoryFilter.find(category => category == wine.category) || (categoryFilter.length == 0) || (priceFilter.find(price => Number(price) == Number(wine.price) ))) {
                             return (
                                 <div key={index} className="col-md-3 mt-5 d-flex flex-column align-items-center justify-content-center">
                                     <a href={`/inside/${wine._id}`} className="d-flex flex-column align-items-center">
