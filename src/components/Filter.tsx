@@ -1,39 +1,75 @@
-export const Filter: React.FC<any> = ({ filter, setFilter }) => {
+export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPriceFilter, priceFilter }) => {
 
-    const wineFilters = (e: any) => {
-        if (filter.find((categoy: any) => categoy == e.target.id)) {
-            const remove = [...filter];
+    const filterCategory = (e: any) => {
+        if (categoryFilter.find((categoy: any) => categoy == e.target.id)) {
+            const remove = [...categoryFilter];
 
-            const index = filter.indexOf(e.target.id)
+            const index = categoryFilter.indexOf(e.target.id)
 
             remove.splice(index, 1)
 
-            setFilter(remove)
-        } else setFilter((filter: any) => [...filter, e.target.id]);
-        
+            setCategoryFilter(remove)
+        } else setCategoryFilter((categoryFilter: any) => [...categoryFilter, e.target.id]);
+
+    }
+    const filterPrice = (e: any) => {
+        if (categoryFilter.find((categoy: any) => categoy == e.target.id)) {
+            const remove = [...categoryFilter];
+
+            const index = categoryFilter.indexOf(e.target.id)
+
+            remove.splice(index, 1)
+
+            setCategoryFilter(remove)
+        } else setCategoryFilter((categoryFilter: any) => [...categoryFilter, e.target.id]);
+
     }
 
     return (
-        <div className="d-flex flex-column position-sticky gap-3 border p-3 me-4 mh-300 top-10">
-            <div className="mb-3">
-                <label htmlFor="branco" className="me-1 pointer">Branco</label>
-                <input className="pointer" onChange={wineFilters} type="checkbox" id="branco" />
+        <div className="d-flex flex-column gap-3 position-sticky top-10">
+            <div className="d-flex flex-column border gap-3 border-gold rounded p-4 me-5 mh-300 ">
+                <div className="mb-3 border-bottom border-gold">
+                        Filtrar por categoria <i className="fa-solid fa-arrow-down-long"></i>
+                </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="branco" className="me-1 pointer">Branco</label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="branco" />
+                </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="rose" className="me-1 pointer">Rose</label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="rose" />
+                </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="tinto" className="me-1 pointer">Tinto</label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="tinto" />
+                </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="espumante" className="me-1 pointer">Espumantes</label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="espumante" />
+                </div>
+
             </div>
-            <div className="mb-3">
-                <label htmlFor="rose" className="me-1 pointer">Rose</label>
-                <input className="pointer" onChange={wineFilters} type="checkbox" id="rose" />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="tinto" className="me-1 pointer">Tinto</label>
-                <input className="pointer" onChange={wineFilters} type="checkbox" id="tinto" />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="espumante" className="me-1 pointer">Espumantes</label>
-                <input className="pointer" onChange={wineFilters} type="checkbox" id="espumante" />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="outros" className="me-1 pointer">Outros</label>
-                <input className="pointer" onChange={wineFilters} type="checkbox" id="outros" />
+            <div className="d-flex flex-column border gap-3 border-gold rounded p-4 me-5 mh-300">
+                <div className="mb-3 border-bottom border-gold">
+                        Filtrar por preço <i className="fa-solid fa-arrow-down-long"></i>
+                </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="branco" className="me-1 pointer">$50 - $100</label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="50" />
+                </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="rose" className="me-1 pointer">$100 - $150</label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="100" />
+                </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="tinto" className="me-1 pointer">$150 - $200</label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="150" />
+                </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="espumante" className="me-1 pointer">$200 ++ </label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="200" />
+                </div>
+
             </div>
         </div>
     )

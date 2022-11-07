@@ -28,6 +28,10 @@
   top: 10px;
 }
 
+.border-gold {
+  border-color: var(--gold) !important;
+}
+
 .App {
   text-align: center;
 }

@@ -31,7 +31,7 @@ export const Promos = () => {
                                     <p>{wines[0].name}</p>
                                     <h4 className='text-decoration-line-through'>De R$ {wines[0].price}</h4>
                                     <p>Por R$ {Number(wines[0].price) - Number(wines[0].sale)}</p>
-                                    <button>APROVEITAR</button>
+                                    <button className="btn btn-gold">APROVEITAR</button>
                                 </div>
                             }
                         </div>
@@ -47,7 +47,7 @@ export const Promos = () => {
                                                 <p>{wine.name}</p>
                                                 <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
                                                 <p>Por R$ {Number(wine.price) - Number(wine.sale)}</p>
-                                                <button>APROVEITAR</button>
+                                                <button className="btn btn-gold">APROVEITAR</button>
                                             </div>
                                         </div>
                                     </div>

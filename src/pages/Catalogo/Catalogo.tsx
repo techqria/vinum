@@ -2,7 +2,7 @@ import React from "react";
 import { Wines } from "./Wines"
 import Footer from "../../components/footer";
 import { Ofertas } from "./Ofertas";
-import Sidebar from "../InsideWine/sidebar";
+import Sidebar from "../../components/Sidebar";
 
 
 export const Catalogo = () => {

@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 export default props => {
     return (
         <Menu>
-            <ul className="navbar-nav">
+            <ul className="navbar-nav d-flex flex-column gap-4">
+                <li className="nav-item ">
+                    <Link className='text-white' to="/" >Página inicial <i className="fa-solid fa-house text-white ms-1"></i></Link>
+                </li>
                 <li className="nav-item">
                     <Link to="/catalogo" style={{ color: '#FFFFFF', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'sans-serif' }}>Nosso Catálogo</Link>
                 </li>
