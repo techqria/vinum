@@ -6,6 +6,7 @@ import { WineDto } from "../../dto/wine.dto";
 
 let auxCurr = 0
 let auxNext = 1
+let auxLast = 2
 
 export const Ofertas = () => {
 
@@ -49,14 +50,26 @@ export const Ofertas = () => {
                                     <a href={`/inside/${wines[1]._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
                                 </div>
                             }
+                            {
+                                wines[2] &&
+                                <div key={2} className="d-flex flex-column justify-content-center align-items-center">
+                                    <a href={`/inside/${wines[2]._id}`}><img width={150} src={wines[2].image} alt="garrafaVinho.svg" /></a>
+                                    <p>{wines[2].name}</p>
+                                    <h4 className='text-decoration-line-through'>De R$ {wines[2].price}</h4>
+                                    <p>Por R$ {(wines[2].sale)}</p>
+                                    <a href={`/inside/${wines[2]._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
+                                </div>
+                            }
                         </div>
                     </div>
                     {
                         wines.map((wine, index) => {
                             let curr = wines[index + auxCurr]
                             let next = wines[index + auxNext]
+                            let last = wines[index + auxLast]
                             auxCurr++
                             auxNext++
+                            auxLast++
 
                             if (index > 1 && next) {
                                 console.log("curr: ", curr)
@@ -77,7 +90,13 @@ export const Ofertas = () => {
                                                 <h4 className='text-decoration-line-through'>De R$ {next.price}</h4>
                                                 <p>Por R$ {(next.sale)}</p>
                                                 <a href={`/inside/${next._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
-
+                                            </div>
+                                            <div key={index + 2} className="d-flex flex-column justify-content-center align-items-center">
+                                                <a href={`/inside/${last._id}`}><img width={150} src={last.image} alt="garrafaVinho.svg" /></a>
+                                                <p>{last.name}</p>
+                                                <h4 className='text-decoration-line-through'>De R$ {last.price}</h4>
+                                                <p>Por R$ {(next.sale)}</p>
+                                                <a href={`/inside/${last._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
                                             </div>
 
                                         </div>
