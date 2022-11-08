@@ -37,7 +37,7 @@ export const Wines = () => {
                                         <img width={150} src={wine.image} alt="garrafaVinho.svg" />
                                         <p>{wine.name}</p>
                                         <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
-                                        <p>Por R$ {Number(wine.price) - Number(wine.sale)}</p>
+                                        <p>Por R$ {(wine.sale)}</p>
                                         <button className="btn btn-gold">APROVEITAR</button>
                                     </a>
                                 </div>

@@ -21,7 +21,7 @@ export const Menu = () => {
             </div>
 
             <div className="d-flex justify-content-center mt-5 bg-transparent">
-                <Link to="/catalogo"><button className='btn btn-gold ps-5 pe-5 fs-4'>VER CATÁLOGO</button></Link>
+                <Link to="/catalogo"><button className='btn btn-gold ps-5 pe-5 fs-4 mt-5'>VER CATÁLOGO</button></Link>
             </div>
         </section>
     )
