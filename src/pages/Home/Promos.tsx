@@ -27,10 +27,20 @@ export const Promos = () => {
                             {
                                 wines[0] &&
                                 <div key={0} className="d-flex flex-column justify-content-center">
-                                    <Link to="/inside"><img width={150} src={wines[0].image} alt="garrafaVinho.svg" /></Link>
+                                    <a href={`/inside/${wines[0]._id}`}><img width={150} src={wines[0].image} alt="garrafaVinho.svg" /></a>
                                     <p>{wines[0].name}</p>
                                     <h4 className='text-decoration-line-through'>De R$ {wines[0].price}</h4>
                                     <p>Por R$ {(wines[0].sale)}</p>
+                                    <button className="btn btn-gold">APROVEITAR</button>
+                                </div>
+                            }
+                            {
+                                wines[1] &&
+                                <div key={1} className="d-flex flex-column justify-content-center">
+                                    <a href={`/inside/${wines[1]._id}`}><img width={150} src={wines[1].image} alt="garrafaVinho.svg" /></a>
+                                    <p>{wines[1].name}</p>
+                                    <h4 className='text-decoration-line-through'>De R$ {wines[1].price}</h4>
+                                    <p>Por R$ {(wines[1].sale)}</p>
                                     <button className="btn btn-gold">APROVEITAR</button>
                                 </div>
                             }
@@ -38,15 +48,22 @@ export const Promos = () => {
                     </div>
                     {
                         wines.map((wine, index) => {
-                            if (index > 0) {
+                            if (index > 1) {
                                 return (
                                     <div className="carousel-item">
                                         <div className="d-flex justify-content-around mt-5">
                                             <div key={index} className="d-flex flex-column justify-content-center">
-                                                <Link to="/inside"><img width={150} src={wine.image} alt="garrafaVinho.svg" /></Link>
+                                                <a href={`/inside/${wine._id}`}><img width={150} src={wine.image} alt="garrafaVinho.svg" /></a>
                                                 <p>{wine.name}</p>
                                                 <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
-                                                <p>Por R$ {(wines[0].sale)}</p>
+                                                <p>Por R$ {(wine.sale)}</p>
+                                                <button className="btn btn-gold">APROVEITAR</button>
+                                            </div>
+                                            <div key={index + 1} className="d-flex flex-column justify-content-center">
+                                                <a href={`/inside/${wine._id}`}><img width={150} src={wine.image} alt="garrafaVinho.svg" /></a>
+                                                <p>{wine.name}</p>
+                                                <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
+                                                <p>Por R$ {(wine.sale)}</p>
                                                 <button className="btn btn-gold">APROVEITAR</button>
                                             </div>
                                         </div>

@@ -14,7 +14,7 @@ export default function Cards() {
     }
 
     return (
-        <section className="container-fluid mt-5">
+        <section className="container-fluid mt-2">
             <div className="row card-group">
                 <div className="col-md-4 mt-4 d-flex justify-content-center">
                     <button className="btn btn-default p-0 " onClick={e => redirectTo('tintos')}>
