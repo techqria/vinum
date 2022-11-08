@@ -24,7 +24,7 @@ export const Wine = ({ wineId }: any) => {
                 <img width={250} src={wine.image} alt="garrafaVinho.svg" />
                 <h3 className='text-decoration-line-through'>De R${wine.price}</h3>
                 <p>Por R$ {(wine.sale)}</p>
-                <button className="btn btn-gold">COMPRAR</button>
+                <a href="https://api.whatsapp.com/send?phone=5561996851375" className="btn btn-gold">COMPRAR</a>
             </div>
 
             <div className="mt-5 mb-5 pt-4 pb-4">

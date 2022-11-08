@@ -87,6 +87,10 @@ button {
   height: 500px;
 }
 
+.mw-120 {
+  max-width: 120px;
+}
+
 .bg-gold {
   background-color: var(--gold);
 }
