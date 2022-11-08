@@ -12,7 +12,7 @@ export default props => {
                     </a>
                 </li>
                 <li className="nav-item scale">
-                    <a className='text-white text-uppercase' href="/catalogo">Nosso Catálogo <i className="fa-regular fa-memo"></i></a>
+                    <a className='text-white text-uppercase' href="/catalogo">Nosso Catálogo <i className="fa-light fa-wine-glass-empty"></i></a>
                 </li>
                 <li className="nav-item scale">
                     <a target="_blank" className='text-white text-uppercase' href='https://api.whatsapp.com/send?text=Olá, Vinum Wine, tenho interesse em seus vinhos!&phone=5561996851375'>Whatsapp<i className="ms-2 fa-brands fa-whatsapp"></i></a>

@@ -19,6 +19,7 @@ const config = {
 export async function UploadImageToS3(file) {
     let location = '';
 
+    console.log(file, config)
     await uploadFile(file, config)
         .then((data) => { console.log(data); location = data.location })
         .catch((err) => console.error(err))
