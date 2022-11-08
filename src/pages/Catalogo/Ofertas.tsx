@@ -46,7 +46,7 @@ export const Ofertas = () => {
                                     <p>{wines[1].name}</p>
                                     <h4 className='text-decoration-line-through'>De R$ {wines[1].price}</h4>
                                     <p>Por R$ {(wines[1].sale)}</p>
-                                    <a href={`/inside/${wines[0]._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
+                                    <a href={`/inside/${wines[1]._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
                                 </div>
                             }
                         </div>
@@ -69,14 +69,14 @@ export const Ofertas = () => {
                                                 <p>{curr.name}</p>
                                                 <h4 className='text-decoration-line-through'>De R$ {curr.price}</h4>
                                                 <p>Por R$ {(curr.sale)}</p>
-                                                <a href={`/inside/${wines[0]._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
+                                                <a href={`/inside/${curr._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
                                             </div>
                                             <div key={index + 1} className="d-flex flex-column justify-content-center align-items-center">
                                                 <a href={`/inside/${next._id}`}><img width={150} src={next.image} alt="garrafaVinho.svg" /></a>
                                                 <p>{next.name}</p>
                                                 <h4 className='text-decoration-line-through'>De R$ {next.price}</h4>
                                                 <p>Por R$ {(next.sale)}</p>
-                                                <a href={`/inside/${wines[0]._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
+                                                <a href={`/inside/${next._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
 
                                             </div>
 
