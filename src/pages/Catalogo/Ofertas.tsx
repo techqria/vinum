@@ -24,12 +24,12 @@ export const Ofertas = () => {
 
     return (
         <section className="container">
-            <h2 className="text-center pt-5  text-red">Melhores Ofertas</h2>
+            <h2 className="text-center pt-5 text-red">Melhores Ofertas</h2>
 
             <div id="carouselPromos" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <div className="d-flex justify-content-around">
+                        <div className="d-flex justify-content-around mt-5">
                         {
                                 wines[0] &&
                                 <div key={0} className="d-flex flex-column justify-content-center align-items-center">
@@ -110,10 +110,10 @@ export const Ofertas = () => {
                 </div>
 
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselPromos" data-bs-slide="prev">
-                    <i className="text-red fw-bold fs-2 fa-solid fa-arrow-left"></i>
+                    <i id="prev" className="text-red fw-bold fs-2 fa-solid fa-arrow-left"></i>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#carouselPromos" data-bs-slide="next">
-                    <i className="fa-solid fa-arrow-right text-red fw-bold fs-2"></i>
+                    <i id="next" className="fa-solid fa-arrow-right text-red fw-bold fs-2"></i>
                 </button>
             </div>
 

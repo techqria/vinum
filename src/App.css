@@ -262,3 +262,10 @@ body {
     background-color: rgba(#DD9F31) !important;
   
 }
+
+#prev{
+margin-right: 250px;
+}
+#next{
+  margin-left: 250px;
+}

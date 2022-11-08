@@ -24,7 +24,7 @@ export const Promos = () => {
         <section className="container mt-5 pt-5 mb-5 text-center">
             <h1 className='pb-2 position-relative'>OFERTAS DA SEMANA</h1>
             <div id="carouselPromos" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-inner">
+                <div className="carousel-inner my-inner">
                     <div className="carousel-item active">
                         <div className="d-flex justify-content-around mt-5">
                             {
@@ -104,10 +104,10 @@ export const Promos = () => {
                 </div>
 
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselPromos" data-bs-slide="prev">
-                    <i className="text-red fw-bold fs-2 fa-solid fa-arrow-left"></i>
+                    <i id="prev" className="text-red fw-bold fs-2 fa-solid fa-arrow-left"></i>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#carouselPromos" data-bs-slide="next">
-                    <i className="fa-solid fa-arrow-right text-red fw-bold fs-2"></i>
+                    <i id="next" className="fa-solid fa-arrow-right text-red fw-bold fs-2"></i>
                 </button>
             </div>
         </section>
