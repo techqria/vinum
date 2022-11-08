@@ -3,11 +3,18 @@ import axios from "axios";
 const api = axios.create({
   baseURL: "https://vinum-wine.herokuapp.com",
   headers: {
-    'Content-Type': 'application/json',
-    "Access-Control-Allow-Origin" : "*",
-    "Access-Control-Allow-Methods" : "*",
-    "Access-Control-Allow-Headers" : "*",
-    "Access-Control-Allow-Credentials" : "true",
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "*",
+    "Access-Control-Allow-Headers": "*",
+    "Access-Control-Allow-Credentials": "true",
+    post: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "*",
+      "Access-Control-Allow-Headers": "*",
+      "Access-Control-Allow-Credentials": "true",
+    }
   }
 });
 
