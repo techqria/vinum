@@ -38,7 +38,7 @@ export const Wines = () => {
                                         <p>{wine.name}</p>
                                         <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
                                         <p>Por R$ {(wine.sale)}</p>
-                                        <button className="btn btn-gold">APROVEITAR</button>
+                                        <a href={`/inside/${wines[0]._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
                                     </a>
                                 </div>
                             )
