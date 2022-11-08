@@ -10,12 +10,17 @@ export const Menu = () => {
                 A Vinum Wine Eventos oferece excelentes rótulos de vinhos, espumantes e destilados para
                 atender todos os tipos de gostos e ocasiões! Mais do que boas opções e preços justos,
                 queremos estar presentes nos momentos mais especiais da sua vida!</p>
-            <div className="d-flex justify-content-center gap-5">
-                <img className='' width={300} src="https://vinum-wine.s3.amazonaws.com/bgCatalogo.svg" alt="vinum catalogo " />
-                <img className='d-none d-md-flex' width={300} src="https://vinum-wine.s3.amazonaws.com/Catalogo/NossoCatalogo2.png" alt="vinum catalogo " />
+
+            <div className="card-group">
+                <div className="card bg-dark text-white">
+                    <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo.jpg" className="card-img" alt="..." /></Link>
+                </div>
+                <div className="card bg-dark text-white">
+                <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo2.jpg" className="card-img" alt="..." /></Link>
+                </div>
             </div>
 
-            <div className="d-flex justify-content-center pt-3 bg-transparent">
+            <div className="d-flex justify-content-center mt-5 bg-transparent">
                 <Link to="/catalogo"><button className='btn btn-gold ps-5 pe-5 fs-4'>VER CATÁLOGO</button></Link>
             </div>
         </section>
