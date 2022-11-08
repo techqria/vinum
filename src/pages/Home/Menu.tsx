@@ -5,8 +5,8 @@ export const Menu = () => {
 
     return (
         <section className="container mt-5 pt-5 mb-5">
-            <h1 className="pb-2 text-center position-relative">NOSSO CATÁLOGO</h1>
-            <p className="text-center">
+            <h1 className="pb-2 text-center position-relative mb-5">NOSSO CATÁLOGO</h1>
+            <p className="text-center mb-5">
                 A Vinum Wine Eventos oferece excelentes rótulos de vinhos, espumantes e destilados para
                 atender todos os tipos de gostos e ocasiões! Mais do que boas opções e preços justos,
                 queremos estar presentes nos momentos mais especiais da sua vida!</p>
@@ -16,7 +16,7 @@ export const Menu = () => {
             </div>
 
             <div className="d-flex justify-content-center pt-3 bg-transparent">
-                <Link to="/catalogo"><button className='btn btn-gold'>VER CATÁLOGO</button></Link>
+                <Link to="/catalogo"><button className='btn btn-gold ps-5 pe-5 fs-4'>VER CATÁLOGO</button></Link>
             </div>
         </section>
     )

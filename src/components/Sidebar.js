@@ -5,19 +5,25 @@ import { Link } from 'react-router-dom';
 export default props => {
     return (
         <Menu>
-            <ul className="navbar-nav d-flex flex-column gap-4">
-                <li className="nav-item ">
-                    <Link className='text-white' to="/" >Página inicial <i className="fa-solid fa-house text-white ms-1"></i></Link>
+            <ul className="navbar-nav d-flex flex-column ms-4 gap-5">
+                <li className="nav-item scale">
+                    <a className='text-white text-uppercase' href="/" >
+                        <img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" />
+                    </a>
                 </li>
-                <li className="nav-item">
-                    <Link to="/catalogo" style={{ color: '#FFFFFF', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'sans-serif' }}>Nosso Catálogo</Link>
+                <li className="nav-item scale">
+                    <a className='text-white text-uppercase' href="/catalogo">Nosso Catálogo <i className="fa-regular fa-memo"></i></a>
                 </li>
-                <li className="nav-item">
-                    <a href="https://www.instagram.com/belavida_bonsvinhos/?igshid=YmMyMTA2M2Y%3D" style={{ color: '#FFFFFF', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'sans-serif' }}>Instagram<i className="ms-3 fa-brands fa-instagram"></i></a>
+                <li className="nav-item scale">
+                    <a target="_blank" className='text-white text-uppercase' href='https://api.whatsapp.com/send?text=Olá, Vinum Wine, tenho interesse em seus vinhos!&phone=5561996851375'>Whatsapp<i className="ms-2 fa-brands fa-whatsapp"></i></a>
                 </li>
-                <li className="nav-item">
-                    <a href="https://www.tiktok.com/@belavida_bonsvinhos?_t=8WanZQTk9Mk&_r=1" style={{ color: '#FFFFFF', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'sans-serif' }}>Tik Tok<i className="ms-3 fa-brands fa-tiktok"></i></a>
+                <li className="nav-item scale">
+                    <a target="_blank" className='text-white text-uppercase' href="https://www.instagram.com/belavida_bonsvinhos/?igshid=YmMyMTA2M2Y%3D">Instagram<i className="ms-2 fa-brands fa-instagram"></i></a>
                 </li>
+                <li className="nav-item scale">
+                    <a target="_blank" className='text-white text-uppercase' href="https://www.tiktok.com/@belavida_bonsvinhos?_t=8WanZQTk9Mk&_r=1">Tik Tok<i className="ms-2 fa-brands fa-tiktok"></i></a>
+                </li>
+
             </ul>
         </Menu>
     );

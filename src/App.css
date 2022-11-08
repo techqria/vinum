@@ -143,6 +143,18 @@ body {
   transition: color 0.2s;
 }
 
+.bm-item:focus-visible {
+  outline: none;
+}
+
+.scale {
+  transition: .4s ease;
+}
+
+.scale:hover {
+  transform: scale(1.04);
+}
+
 .bm-item:hover {
   color: white;
 }

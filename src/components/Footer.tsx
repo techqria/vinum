@@ -3,6 +3,7 @@ export default function Footer() {
         <footer className="container mt-5 pt-5 pb-4">
             <div className="row mt-5 pt-5 mb-5 d-flex align-items-center">
                 <div className="col-md-12 mt-5 d-flex flex-column">
+                    <h4 className="text-center mb-2">Nossas redes sociais</h4>
                     <div className="text-gold d-flex justify-content-center gap-5 mt-2">
                         <a href="https://www.instagram.com/belavida_bonsvinhos/" target="_blank">
                             <i className="ms-3 fa-brands fa-instagram text-dark fa-2xl"></i>
