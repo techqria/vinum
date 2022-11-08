@@ -9,6 +9,7 @@ import { NewProduct } from "./pages/Admin/NewProduct";
 import { ChangeProduct } from "./pages/Admin/ChangeProduct";
 import { RemoveProduct } from "./pages/Admin/RemoveProduct";
 
+
 function App() {
 
   return (

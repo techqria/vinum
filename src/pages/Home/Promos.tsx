@@ -11,7 +11,7 @@ export const Promos = () => {
         api.get("/wine/listAll")
             .then((response) => {
                 response.data.forEach((wine: any) => {
-                    if (Number(wine.sale) > 0) setWines(wines => [...wines, wine])
+                    if ((wine.sale) != '0') setWines(wines => [...wines, wine])
                 })
             })
             .catch(err => console.error("ops! ocorreu um erro" + err));
@@ -30,7 +30,7 @@ export const Promos = () => {
                                     <Link to="/inside"><img width={150} src={wines[0].image} alt="garrafaVinho.svg" /></Link>
                                     <p>{wines[0].name}</p>
                                     <h4 className='text-decoration-line-through'>De R$ {wines[0].price}</h4>
-                                    <p>Por R$ {Number(wines[0].price) - Number(wines[0].sale)}</p>
+                                    <p>Por R$ {(wines[0].sale)}</p>
                                     <button className="btn btn-gold">APROVEITAR</button>
                                 </div>
                             }
@@ -46,7 +46,7 @@ export const Promos = () => {
                                                 <Link to="/inside"><img width={150} src={wine.image} alt="garrafaVinho.svg" /></Link>
                                                 <p>{wine.name}</p>
                                                 <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
-                                                <p>Por R$ {Number(wine.price) - Number(wine.sale)}</p>
+                                                <p>Por R$ {(wines[0].sale)}</p>
                                                 <button className="btn btn-gold">APROVEITAR</button>
                                             </div>
                                         </div>

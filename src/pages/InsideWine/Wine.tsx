@@ -21,9 +21,9 @@ export const Wine = ({ wineId }: any) => {
             <h1 className='pb-2 position-relative'>{wine.name}</h1>
 
             <div className="d-flex flex-column align-items-center justify-content-center">
-                <img width={250} src="https://vinum-wine.s3.amazonaws.com/Catalogo/catena.png" alt="garrafaVinho.svg" />
-                <h3 className='text-decoration-line-through'>De {wine.price}</h3>
-                <p>Por {Number(wine.price) - Number(wine.sale)}</p>
+                <img width={250} src={wine.image} alt="garrafaVinho.svg" />
+                <h3 className='text-decoration-line-through'>De R${wine.price}</h3>
+                <p>Por R$ {(wine.sale)}</p>
                 <button className="btn btn-gold">COMPRAR</button>
             </div>
 
@@ -41,19 +41,15 @@ export const Wine = ({ wineId }: any) => {
                         <p>{wine.country}</p>
                     </li>
                     <li>
-                        <p className="fw-bold mb-0">Região</p>
-                        <p>{wine.region}</p>
-                    </li>
-                    <li>
                         <p className="fw-bold mb-0">Volume</p>
                         <p>{wine.vol}</p>
                     </li>
                     <li>
-                        <p className="fw-bold mb-0">Coloração</p>
+                        <p className="fw-bold mb-0">Tipo</p>
                         <p>{wine.coloration}</p>
                     </li>
                     <li>
-                        <p className="fw-bold mb-0">Tipo</p>
+                        <p className="fw-bold mb-0">Categoria</p>
                         <p>{wine.category}</p>
                     </li>
                     <li>

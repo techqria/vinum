@@ -18,13 +18,13 @@ export const Ofertas = () => {
     }, []);
 
     return (
-        <section className="container mt-5 pb-5">
+        <section className="container">
             <h2 className="text-center mt-5 pt-5 text-red">Melhores Ofertas</h2>
 
             <div id="carouselPromos" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <div className="d-flex justify-content-around mt-5 pb-5">
+                        <div className="d-flex justify-content-around">
                             {
                                 wines[0] &&
                                 <div key={0} className="d-flex justify-content-center align-items-center">

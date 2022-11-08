@@ -8,7 +8,6 @@ export const Catalogo = () => {
     return (
         <>
             <Sidebar />
-            <h2 className="d-flex justify-content-center pb-2  pt-5 position-relative">Catálogo</h2>
             <Ofertas />
             <Wines />
             <Footer /> 
