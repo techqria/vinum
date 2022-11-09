@@ -6,13 +6,7 @@ import { Promos } from './Promos';
 import Cards from "./Cards"
 import Footer from "../../components/Footer";
 
-
-
-
 export const Main = () => {
-
-
-    const { innerWidth, innerHeight } = window;
     const [scroll, setScroll] = useState(false)
 
     window.addEventListener('scroll', () => {

@@ -1,32 +1,33 @@
 import React, { useState, useEffect } from "react";
-import { Router } from 'react-router-dom';
-import { slide as Menu } from 'react-burger-menu';
-import { Link } from 'react-router-dom';
-import SidebarComponent from './component'
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
-export default props => {
+
+export default function Sidebar({scroll, color}) {
+    
+    useEffect(() => {
+        if (scroll){
+            document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+        } else{
+            color ? document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)' : document.getElementById('sidebar').style.backgroundColor = "transparent";
+        }
+    }, [scroll])
+
     return (
-        <Menu>
-            <ul className="navbar-nav d-flex flex-column ms-4 gap-5" >
-                <li className="nav-item scale">
-                    <a className='text-white text-uppercase' href="/" >
-                        <img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" />
-                    </a>
-                </li>
-                <li className="nav-item scale">
-                    <a className='text-white text-uppercase' href="/catalogo">Nosso Catálogo <i className="fa-light fa-wine-glass-empty"></i></a>
-                </li>
-                <li className="nav-item scale">
-                    <a target="_blank" className='text-white text-uppercase' href='https://api.whatsapp.com/send?text=Olá, Vinum Wine, tenho interesse em seus vinhos!&phone=5561996851375'>Whatsapp<i className="ms-2 fa-brands fa-whatsapp"></i></a>
-                </li>
-                <li className="nav-item scale">
-                    <a target="_blank" className='text-white text-uppercase' href="https://www.instagram.com/belavida_bonsvinhos/?igshid=YmMyMTA2M2Y%3D">Instagram<i className="ms-2 fa-brands fa-instagram"></i></a>
-                </li>
-                <li className="nav-item scale">
-                    <a target="_blank" className='text-white text-uppercase' href="https://www.tiktok.com/@belavida_bonsvinhos?_t=8WanZQTk9Mk&_r=1">Tik Tok<i className="ms-2 fa-brands fa-tiktok"></i></a>
-                </li>
-            </ul>
-        </Menu>
-    );
-};
+        <nav className="zIndex position-fixed">
+
+            <button className="btn btn-default button-sidebar d-md-none position-fixed mt-3 ms-3"><i className="text-red fa-solid fa-2x fa-bars"></i></button>
+
+            <div id="sidebar" className="sidebar d-flex justify-content-md-around flex-column flex-md-row">
+                <img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" />
+                <ul className="text-white d-flex flex-column flex-md-row justify-content-md-center p-5 gap-4">
+                    <li className="text-red fw-bold">Catálogo</li>
+                    <li>Whatsapp</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+
+        </nav>
+    )
+}
