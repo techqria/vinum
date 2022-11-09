@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import { Router } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import { Link } from 'react-router-dom';
+import SidebarComponent from './component'
+
 
 export default props => {
     return (
         <Menu>
-            <ul className="navbar-nav d-flex flex-column ms-4 gap-5">
+            <ul className="navbar-nav d-flex flex-column ms-4 gap-5" >
                 <li className="nav-item scale">
                     <a className='text-white text-uppercase' href="/" >
                         <img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" />
@@ -23,7 +26,6 @@ export default props => {
                 <li className="nav-item scale">
                     <a target="_blank" className='text-white text-uppercase' href="https://www.tiktok.com/@belavida_bonsvinhos?_t=8WanZQTk9Mk&_r=1">Tik Tok<i className="ms-2 fa-brands fa-tiktok"></i></a>
                 </li>
-
             </ul>
         </Menu>
     );

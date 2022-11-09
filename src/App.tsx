@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import './App.css';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { Main } from "./pages/Home/Main";

@@ -1,11 +1,14 @@
-import Header  from './Header';
-import SideBar from '../Sidebar';
+import React from 'react';
+import Header from './Header';
+//import Sidebar from '../sidebar/Sidebar';
+import Navbar from "../navbar"
 
-export const MainHeader = () => {
+
+export const MainHeader: React.FC<any> = ({scroll}) => {
     return (
+        <>
 
-        <>  
-            <SideBar />
+            <Navbar scroll={scroll}/>
             <Header />
         </>
     )
