@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Wines } from "./Wines"
 import Footer from "../../components/Footer";
-import { Ofertas } from "./Ofertas";
+
 import Sidebar from "../../components/sidebar/Sidebar";
+import { Caroulsel } from '../../components/Caroulsel'
 
 
 
@@ -28,7 +29,8 @@ export const Catalogo = () => {
     return (
         <>
             <Sidebar scroll={scroll} color={'black'}/>
-            <Ofertas />
+            <div className="pt-3"></div>
+            <Caroulsel/>
             <Wines />
             <Footer />
         </>

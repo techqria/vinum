@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { Main } from "./pages/Home/Main";
-import { Catalogo } from "./pages/Catalogo/Catalogo";
+import { Catalogo } from "./pages/Catalogo/mainCatalogo";
 import { Inside } from "./pages/InsideWine/InsideWine";
 import { Admin } from "./pages/Admin/Admin";
 import { NewProduct } from "./pages/Admin/NewProduct";

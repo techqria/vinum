@@ -22,17 +22,6 @@ export const Main = () => {
                         REMOVER PRODUTO
                     </Link>
                 </div>
-                <div className="col-md-4 mt-5 d-flex justify-content-center">
-                    <Link to="/admin/nova-imagem" className="p-5 fw-bold fs-5 btn btn-outline-gold text-white">
-                        ADICIONAR IMAGEM DO CARROSEL
-                    </Link>
-                </div>
-
-                <div className="col-md-4 mt-5 d-flex justify-content-center">
-                    <Link to="/admin/remover-imagem" className="p-5 fw-bold fs-5 btn btn-outline-gold text-white">
-                        REMOVER IMAGEM DO CARROSEL
-                    </Link>
-                </div>
             </div>
         </section>
 

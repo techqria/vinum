@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { MainHeader } from '../../components/header/MainHeader';
 import { Menu } from "./Menu";
-import { Promos } from './Promos';
+import { Caroulsel } from '../../components/Caroulsel';
 import Cards from "./Cards"
 import Footer from "../../components/Footer";
 
@@ -28,7 +28,7 @@ export const Main = () => {
         <>
             <MainHeader scroll={scroll}/>
             <Cards />
-            <Promos />
+            <Caroulsel />
             <Menu />
             <Footer />
         </>

@@ -103,7 +103,7 @@ export const ChangeProduct = () => {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">País</label>
+                                <label htmlFor="" className="form-label text-white">Região</label>
                                 <input id="country" value={currentWine?.country} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>

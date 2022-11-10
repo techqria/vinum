@@ -37,7 +37,7 @@ export const Wine = ({ wineId }: any) => {
 
                 <ul className="d-flex flex-column gap-3 mt-4">
                     <li>
-                        <p className="fw-bold mb-0">País de origem</p>
+                        <p className="fw-bold mb-0">Região de origem</p>
                         <p>{wine.country}</p>
                     </li>
                     <li>
