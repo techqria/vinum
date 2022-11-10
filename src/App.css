@@ -263,14 +263,20 @@ body {
   
 }
 
-.catalogo, .inside{
+.catalogo{
   padding-top: 120px;
+}
+.inside{
+  margin-top: 200px;
 }
 .bgCatalogo{
   margin-left: 170px;
   margin-top: 20px;
 }
-
+.compra{
+  margin-top: 250px;
+  margin-left: 100px;
+}
 
 /* NAVBAR AQUI */
 
