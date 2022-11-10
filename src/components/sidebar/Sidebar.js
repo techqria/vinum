@@ -27,7 +27,6 @@ export default function Sidebar({scroll, color}) {
                     <li>Instagram</li>
                 </ul>
             </div>
-
         </nav>
     )
 }
