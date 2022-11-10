@@ -18,7 +18,7 @@ export const Wine = ({ wineId }: any) => {
 
     return (
         <section className="container pt-5 pb-5 mb-5 text-center">
-            <h1 className='pb-2 position-relative'>{wine.name}</h1>
+            <h1 className='inside pb-2 position-relative'>{wine.name}</h1>
 
             <div className="d-flex flex-column align-items-center justify-content-center">
                 <img width={250} src={wine.image} alt="garrafaVinho.svg" />
@@ -32,7 +32,7 @@ export const Wine = ({ wineId }: any) => {
                 <p className="mt-4">{wine.description}</p>
             </div>
 
-            <div className="mt-5 mb-5 pt-4 pb-4">
+            <div className="mt-5 mb-5 pt-4">
                 <h1 className="pb-2 position-relative">Ficha Técnica</h1>
 
                 <ul className="d-flex flex-column gap-3 mt-4">

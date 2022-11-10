@@ -23,8 +23,9 @@ export const Ofertas = () => {
     }, []);
 
     return (
-        <section className="container">
-            <h2 className="text-center pt-5 text-red">Melhores Ofertas</h2>
+        <section className="catalogo container">
+            
+            <h2 className=" text-center pt-5 text-red">Melhores Ofertas</h2>
 
             <div id="carouselPromos" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
