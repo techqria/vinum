@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPriceFilter, priceFilter }) => {
 
     const filterCategory = (e: any) => {
-        if (categoryFilter.find((categoy: any) => categoy == e.target.id)) {
+        if (categoryFilter.find((category: any) => category == e.target.id)) {
             const remove = [...categoryFilter];
 
             const index = categoryFilter.indexOf(e.target.id)
@@ -15,7 +15,7 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
 
     }
     const filterPrice = (e: any) => {
-        if (priceFilter.find((categoy: any) => categoy == e.target.id)) {
+        if (priceFilter.find((category: any) => category == e.target.id)) {
             const remove = [...priceFilter];
 
             const index = priceFilter.indexOf(e.target.id)
