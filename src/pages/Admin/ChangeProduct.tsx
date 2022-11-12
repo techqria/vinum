@@ -88,7 +88,7 @@ export const ChangeProduct = () => {
                         <div className="col-md-6">
 
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Desconto</label>
+                                <label htmlFor="" className="form-label text-white">Preço com Desconto</label>
                                 <input id="sale" value={currentWine?.sale} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
@@ -102,35 +102,18 @@ export const ChangeProduct = () => {
 
                     <div className="row">
                         <div className="col-md-6">
-
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">País</label>
+                                <label htmlFor="" className="form-label text-white">Região</label>
                                 <input id="country" value={currentWine?.country} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Região</label>
-                                <input id="region" value={currentWine?.region} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-md-6">
-                            <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Quantidade</label>
-                                <input id="vol" value={currentWine?.vol} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Coloração</label>
+                                <label htmlFor="" className="form-label text-white">Tipo</label>
                                 <input id="coloration" value={currentWine?.coloration} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                     </div>
-
                     <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">

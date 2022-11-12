@@ -17,50 +17,68 @@ export const Wine = ({ wineId }: any) => {
 
 
     return (
-        <section className="container pt-5 pb-5 mb-5 text-center">
-            <h1 className='pb-2 position-relative'>{wine.name}</h1>
+        <section className="container text-center">
+            <h1 className='position-relative'>{wine.name}</h1>
+            <div className="row mt-5 pt-5">
+                <div className="col-md-6">
+                    <div className="d-flex align-items-center justify-content-center">
+                        <img width={250} src={wine.image} alt="garrafaVinho.svg" />
+                        <div className="d-flex flex-column">
+                            <h3 className='text-center text-decoration-line-through'>De R${wine.price}</h3>
+                            <p className="text-center">Por R$ {(wine.sale)}</p>
+                            <a href="https://api.whatsapp.com/send?phone=5561996851375" className="btn btn-gold">COMPRAR</a>
+                        </div>
+                    </div>
+                </div>
 
-            <div className="d-flex flex-column align-items-center justify-content-center">
-                <img width={250} src={wine.image} alt="garrafaVinho.svg" />
-                <h3 className='text-decoration-line-through'>De R${wine.price}</h3>
-                <p>Por R$ {(wine.sale)}</p>
-                <button className="btn btn-gold">COMPRAR</button>
+                <div className="col-md-6 mt-md-3">
+                    <div className="mb-5 d-flex flex-column align-items-center">
+                        <h2 className="pb-2 position-relative text-red">Ficha Técnica</h2>
+
+                        <div className="d-flex gap-5">
+                            <ul className="d-flex flex-column gap-3 mt-4">
+                                <li>
+                                    <p className="fw-bold mb-0">País de origem</p>
+                                    <p>{wine.country}</p>
+                                </li>
+                                <li>
+                                    <p className="fw-bold mb-0">Volume</p>
+                                    <p>{wine.vol}</p>
+                                </li>
+                                <li>
+                                    <p className="fw-bold mb-0">Tipo</p>
+                                    <p>{wine.coloration}</p>
+                                </li>
+
+                            </ul>
+
+                            <ul className="d-flex flex-column gap-3 mt-4">
+                                <li>
+                                    <p className="fw-bold mb-0">Categoria</p>
+                                    <p>{wine.category}</p>
+                                </li>
+                                <li>
+                                    <p className="fw-bold mb-0">Teor Alcólico</p>
+                                    <p>{wine.alcohol}</p>
+                                </li>
+                                <li>
+                                    <p className="fw-bold mb-0">Safra</p>
+                                    <p>{wine.year}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
-            <div className="mt-5 mb-5 pt-4 pb-4">
-                <h1 className="pb-2 position-relative">Descrição</h1>
-                <p className="mt-4">{wine.description}</p>
-            </div>
-
-            <div className="mt-5 mb-5 pt-4 pb-4">
-                <h1 className="pb-2 position-relative">Ficha Técnica</h1>
-
-                <ul className="d-flex flex-column gap-3 mt-4">
-                    <li>
-                        <p className="fw-bold mb-0">País de origem</p>
-                        <p>{wine.country}</p>
-                    </li>
-                    <li>
-                        <p className="fw-bold mb-0">Volume</p>
-                        <p>{wine.vol}</p>
-                    </li>
-                    <li>
-                        <p className="fw-bold mb-0">Tipo</p>
-                        <p>{wine.coloration}</p>
-                    </li>
-                    <li>
-                        <p className="fw-bold mb-0">Categoria</p>
-                        <p>{wine.category}</p>
-                    </li>
-                    <li>
-                        <p className="fw-bold mb-0">Teor Alcólico</p>
-                        <p>{wine.alcohol}</p>
-                    </li>
-                    <li>
-                        <p className="fw-bold mb-0">Safra</p>
-                        <p>{wine.year}</p>
-                    </li>
-                </ul>
+            <div className="row">
+                <div className="col-md-12">
+                    <div className="mt-5 mb-5 pt-4 pb-4">
+                        <h1 className="pb-2 position-relative">Descrição</h1>
+                        <p className="mt-4">{wine.description}</p>
+                    </div>
+                </div>
             </div>
 
 

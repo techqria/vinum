@@ -37,8 +37,8 @@ export const Wines = () => {
                                         <img width={150} src={wine.image} alt="garrafaVinho.svg" />
                                         <p>{wine.name}</p>
                                         <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
-                                        <p>Por R$ {Number(wine.price) - Number(wine.sale)}</p>
-                                        <button className="btn btn-gold">APROVEITAR</button>
+                                        <p>Por R$ {(wine.sale)}</p>
+                                        <a href={`/inside/${wines[0]._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
                                     </a>
                                 </div>
                             )

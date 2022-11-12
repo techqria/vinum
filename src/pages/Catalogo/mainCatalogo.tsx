@@ -1,12 +1,14 @@
-import React from "react";
-import { useState } from "react";
-import { MainHeader } from '../../components/header/MainHeader';
-import { Menu } from "./Menu";
-import { Caroulsel } from '../../components/Caroulsel';
-import Cards from "./Cards"
+import React, { useState } from "react";
+import { Wines } from "./Wines"
 import Footer from "../../components/Footer";
 
-export const Main = () => {
+import Sidebar from "../../components/sidebar/Sidebar";
+import { Caroulsel } from '../../components/Caroulsel'
+
+
+
+export const Catalogo = () => {
+
     const [scroll, setScroll] = useState(false)
 
     window.addEventListener('scroll', () => {
@@ -26,10 +28,10 @@ export const Main = () => {
 
     return (
         <>
-            <MainHeader scroll={scroll}/>
-            <Cards />
-            <Caroulsel />
-            <Menu />
+            <Sidebar scroll={scroll} color={'black'}/>
+            <div className="pt-3"></div>
+            <Caroulsel/>
+            <Wines />
             <Footer />
         </>
     )
