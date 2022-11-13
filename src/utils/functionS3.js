@@ -3,10 +3,10 @@ import api from '../api/api';
 import { S3Client, PutObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
 window.Buffer = window.Buffer || require("buffer").Buffer;
 
-const S3_BUCKET = process.env.REACT_APP_S3_BUCKET;
-const REGION = process.env.REACT_APP_REGION;
-const ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY;
-const SECRET_ACCESS_KEY = process.env.REACT_APP_SECRET_ACCESS_KEY;
+const S3_BUCKET = 'vinum-wine';
+const REGION = 'us-east-1';
+const ACCESS_KEY ='AKIATDAWPY26KWRISHLB';
+const SECRET_ACCESS_KEY = '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';
 
 const bucket = new S3Client(
     {
@@ -44,9 +44,6 @@ export async function UploadImageToS3(file) {
     } catch (error) {
         return error.toString()
     }
-    // await uploadFile(file, config)
-    //     .then((data) => { console.log(data); location = data.location })
-    //     .catch((err) => console.error(err))
 
     return location
 }
