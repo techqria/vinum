@@ -6,7 +6,7 @@ window.Buffer = window.Buffer || require("buffer").Buffer;
 const S3_BUCKET = 'vinum-wine';
 const REGION = 'us-east-1';
 const ACCESS_KEY = 'AKIATDAWPY26KWRISHLB';
-const SECRET_ACCESS_KEY = 'DMlnDmu8Bko3zvwXP';
+const SECRET_ACCESS_KEY = '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';
 
 const bucket = new S3Client(
     {
