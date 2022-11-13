@@ -22,20 +22,20 @@ var s3 = new AWS.S3({ apiVersion: "2006-03-01", params: { Bucket: S3_BUCKET } })
 export async function UploadImageToS3(file) {
     let location = '';
 
-    let upload_params = { Bucket: S3_BUCKET, Key: config.dirName + '/' + file.name, Body: file };
-    let upload = new AWS.S3.ManagedUpload({ params: upload_params });
+    // let upload_params = { Bucket: S3_BUCKET, Key: config.dirName + '/' + file.name, Body: file };
+    // let upload = new AWS.S3.ManagedUpload({ params: upload_params });
 
-    await upload.promise().then(
-        function (data) {
-            console.log('success')
-            location = data.Location
-        },
-        function (err) { console.log("Failed to upload", file.name, "with error:", err.message); }
-    );
+    // await upload.promise().then(
+    //     function (data) {
+    //         console.log('success')
+    //         location = data.Location
+    //     },
+    //     function (err) { console.log("Failed to upload", file.name, "with error:", err.message); }
+    // );
 
-    // await uploadFile(file, config)
-    //     .then((data) => { console.log(data); location = data.location })
-    //     .catch((err) => console.error(err))
+    await uploadFile(file, config)
+        .then((data) => { console.log(data); location = data.location })
+        .catch((err) => console.error(err))
 
     return location
 }
