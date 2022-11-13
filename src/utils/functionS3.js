@@ -1,12 +1,22 @@
 import { uploadFile, deleteFile } from 'react-s3';
 import api from '../api/api';
-import AWS from 'aws-sdk';
+import { S3Client, PutObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
 window.Buffer = window.Buffer || require("buffer").Buffer;
 
 const S3_BUCKET = process.env.REACT_APP_S3_BUCKET;
 const REGION = process.env.REACT_APP_REGION;
 const ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY;
 const SECRET_ACCESS_KEY = process.env.REACT_APP_SECRET_ACCESS_KEY;
+
+const bucket = new S3Client(
+    {
+        credentials: {
+            accessKeyId: ACCESS_KEY,
+            secretAccessKey: SECRET_ACCESS_KEY,
+        },
+        region: REGION,
+    }
+);
 
 const config = {
     bucketName: S3_BUCKET,
@@ -16,26 +26,27 @@ const config = {
     secretAccessKey: SECRET_ACCESS_KEY,
 }
 
-AWS.config.update({ region: REGION, credentials: new AWS.Credentials(ACCESS_KEY, SECRET_ACCESS_KEY) });
-var s3 = new AWS.S3({ apiVersion: "2006-03-01", params: { Bucket: S3_BUCKET } });
-
 export async function UploadImageToS3(file) {
     let location = '';
 
-    // let upload_params = { Bucket: S3_BUCKET, Key: config.dirName + '/' + file.name, Body: file };
-    // let upload = new AWS.S3.ManagedUpload({ params: upload_params });
+    const params = {
+        Bucket: S3_BUCKET,
+        Key: `wines/` + file.name,
+        Body: file,
+        ACL: 'public-read',
+        ContentType: file.type
+    };
 
-    // await upload.promise().then(
-    //     function (data) {
-    //         console.log('success')
-    //         location = data.Location
-    //     },
-    //     function (err) { console.log("Failed to upload", file.name, "with error:", err.message); }
-    // );
-
-    await uploadFile(file, config)
-        .then((data) => { console.log(data); location = data.location })
-        .catch((err) => console.error(err))
+    try {
+        await bucket.send(new PutObjectCommand(params));
+        console.log("SUCCESS");
+        location = 'https://vinum-wine.s3.amazonaws.com/' + `wines/` + file.name;
+    } catch (error) {
+        return error.toString()
+    }
+    // await uploadFile(file, config)
+    //     .then((data) => { console.log(data); location = data.location })
+    //     .catch((err) => console.error(err))
 
     return location
 }
