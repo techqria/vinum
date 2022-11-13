@@ -27,6 +27,13 @@
 .top-10 {
   top: 10px;
 }
+.top-140 {
+  top: 140px;
+}
+
+.top-240 {
+  top: 460px;
+}
 
 .border-gold {
   border-color: var(--gold) !important;

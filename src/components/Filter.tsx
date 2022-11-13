@@ -27,8 +27,8 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
     }
 
     return (
-        <div className="d-flex flex-column gap-3 position-sticky top-10 d-md-flex d-none">
-            <div className="d-flex flex-column border gap-3 border-gold rounded p-4 me-5 mh-300 ">
+        <div className="d-flex flex-column gap-3  d-md-flex d-none">
+            <div className="d-flex flex-column border gap-3  border-gold rounded p-4 me-5 mh-300 ">
                 <div className="mb-3 border-bottom border-gold">
                         Filtrar por categoria <i className="fa-solid fa-arrow-down-long"></i>
                 </div>
@@ -50,7 +50,7 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                 </div>
 
             </div>
-            <div className="d-flex flex-column border gap-3 border-gold rounded p-4 me-5 mh-300">
+            <div className="d-flex flex-column border gap-3  border-gold rounded p-4 me-5 mh-300">
                 <div className="mb-3 border-bottom border-gold">
                         Filtrar por preço <i className="fa-solid fa-arrow-down-long"></i>
                 </div>
