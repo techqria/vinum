@@ -1,9 +1,13 @@
 import { useState } from "react"
+import { useNavigate } from "react-router";
 import api from "../../api/api";
+import { UserDto } from "../../dto/user.dto";
 
 export const Login = () => {
 
-    const [user, setUser] = useState({
+    const navigate = useNavigate()
+
+    const [user, setUser] = useState<UserDto>({
         username: '',
         password: ''
     });
@@ -19,10 +23,15 @@ export const Login = () => {
     const login = (e: any) => {
         e.preventDefault();
 
-        api.get('/user/auth', { params: user })
-            .then(result => console.log('result',result))
+        api.post('/user/auth', user)
+            .then(result => {
+                if (result.data) {
+                    localStorage.setItem('logged', result.data._id)
+                    navigate('/admin')
+                }
+            })
             .catch(e => console.log(e))
-            
+
     }
 
     return (

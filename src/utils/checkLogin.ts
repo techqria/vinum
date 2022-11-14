@@ -1,3 +1,7 @@
 export function checkLogin() {
-    localStorage.getItem('logged')
+    if (localStorage.getItem('logged')) {
+        return 'logged'
+    } else {
+        return null
+    }
 }
