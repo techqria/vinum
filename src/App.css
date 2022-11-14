@@ -27,6 +27,13 @@
 .top-10 {
   top: 10px;
 }
+.top-140 {
+  top: 140px;
+}
+
+.top-240 {
+  top: 460px;
+}
 
 .border-gold {
   border-color: var(--gold) !important;
@@ -61,6 +68,9 @@ h1::after {
   background-color: var(--red);
   width: 4px;
   height: 6px;
+}
+.ofertas{
+  margin-top: 130px;
 }
 
 .ofertas h2 {

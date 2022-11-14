@@ -2,9 +2,9 @@ import React from "react";
 import { useState } from "react";
 import { MainHeader } from '../../components/header/MainHeader';
 import { Menu } from "./Menu";
-import { Caroulsel } from '../../components/Caroulsel';
 import Cards from "./Cards"
 import Footer from "../../components/Footer";
+import { Slider } from "../../components/Slider";
 
 export const Main = () => {
     const [scroll, setScroll] = useState(false)
@@ -28,7 +28,7 @@ export const Main = () => {
         <>
             <MainHeader scroll={scroll}/>
             <Cards />
-            <Caroulsel />
+            <Slider />
             <Menu />
             <Footer />
         </>

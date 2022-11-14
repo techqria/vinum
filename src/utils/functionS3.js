@@ -1,27 +1,50 @@
-import { uploadFile, deleteFile } from 'react-s3';
+import { deleteFile } from 'react-s3';
 import api from '../api/api';
+import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 window.Buffer = window.Buffer || require("buffer").Buffer;
 
-const S3_BUCKET = process.env.REACT_APP_S3_BUCKET;
-const REGION = process.env.REACT_APP_REGION;
-const ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY;
-const SECRET_ACCESS_KEY = process.env.REACT_APP_SECRET_ACCESS_KEY;
+const S3_BUCKET = 'vinum-wine';
+const REGION = 'us-east-1';
+const ACCESS_KEY = 'AKIATDAWPY26KWRISHLB';
+const SECRET_ACCESS_KEY = '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';
+
+const bucket = new S3Client(
+    {
+        credentials: {
+            accessKeyId: ACCESS_KEY,
+            secretAccessKey: SECRET_ACCESS_KEY,
+        },
+        region: REGION,
+    }
+);
 
 const config = {
     bucketName: S3_BUCKET,
+    dirName: 'wines',
     region: REGION,
     accessKeyId: ACCESS_KEY,
     secretAccessKey: SECRET_ACCESS_KEY,
-    dirName: 'wines'
 }
 
 export async function UploadImageToS3(file) {
     let location = '';
 
-    await uploadFile(file, config)
-        .then((data) => { console.log(data); location = data.location })
-        .catch((err) => console.error(err))
+    const params = {
+        Bucket: S3_BUCKET,
+        Key: `wines/` + file.name,
+        Body: file,
+        ACL: 'public-read',
+        ContentType: file.type
+    };
 
+    try {
+        await bucket.send(new PutObjectCommand(params));
+        console.log("SUCCESS");
+        location = 'https://vinum-wine.s3.amazonaws.com/' + `wines/` + file.name;
+    } catch (error) {
+        return error.toString()
+    }
+    
     return location
 }
 

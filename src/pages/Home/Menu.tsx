@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
 
 export const Menu = () => {
@@ -10,13 +9,12 @@ export const Menu = () => {
                 A Vinum Wine Eventos oferece excelentes rótulos de vinhos, espumantes e destilados para
                 atender todos os tipos de gostos e ocasiões! Mais do que boas opções e preços justos,
                 queremos estar presentes nos momentos mais especiais da sua vida!</p>
-
             <div className="card-group">
                 <div className="card bg-dark text-white">
                     <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo.jpg" className="card-img" alt="..." /></Link>
                 </div>
                 <div className="card bg-dark text-white">
-                <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo2.jpg" className="card-img" alt="..." /></Link>
+                    <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo2.jpg" className="card-img" alt="..." /></Link>
                 </div>
             </div>
 

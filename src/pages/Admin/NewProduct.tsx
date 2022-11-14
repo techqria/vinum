@@ -31,6 +31,8 @@ export const NewProduct = () => {
 
         newWine.image = urlImage
 
+        console.log(newWine)
+
         api.post('/wine/createwine', newWine)
             .then(response => navigate('/admin'))
             .catch(e => console.log(e))
@@ -79,13 +81,27 @@ export const NewProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Região</label>
-                                <input id="country" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <input id="region" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Tipo</label>
                                 <input id="coloration" placeholder="Seco, Tinto, Branco" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="mb-3">
+                                <label htmlFor="" className="form-label text-white">País</label>
+                                <input id="country" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="mb-3">
+                                <label htmlFor="" className="form-label text-white">Volume</label>
+                                <input id="vol" placeholder="Seco, Tinto, Branco" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                     </div>
