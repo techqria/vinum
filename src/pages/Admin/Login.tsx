@@ -22,6 +22,7 @@ export const Login = () => {
         api.get('/user/auth', { params: user })
             .then(result => console.log('result',result))
             .catch(e => console.log(e))
+            
     }
 
     return (
