@@ -2,10 +2,9 @@ import { useState } from "react"
 import { useNavigate } from "react-router";
 import api from "../../api/api";
 import { UserDto } from "../../dto/user.dto";
+import { Admin } from "./Admin";
 
 export const Login = () => {
-
-    const navigate = useNavigate()
 
     const [user, setUser] = useState<UserDto>({
         username: '',
@@ -27,7 +26,7 @@ export const Login = () => {
             .then(result => {
                 if (result.data) {
                     localStorage.setItem('logged', result.data._id)
-                    navigate('/admin')
+                    return <Admin />
                 }
             })
             .catch(e => console.log(e))
