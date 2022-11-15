@@ -26,7 +26,7 @@ export const Slider = () => {
 
     return (
         <div className="container py-4 px-4 ">
-            <h2 className="ofertas text-center text-red pb-3">Melhores Ofertas</h2>
+            <h2 className="mt-5 text-center text-red pb-3">Melhores Ofertas</h2>
             <p className="text-center p-1">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
             <Swiper
             autoplay={{
