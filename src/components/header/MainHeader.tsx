@@ -3,11 +3,13 @@ import Header from './Header';
 import Sidebar from '../sidebar/Sidebar';
 
 
-export const MainHeader: React.FC<any> = ({scroll}) => {
+export const MainHeader: React.FC<any> = ({scroll, older}) => {
     return (
         <>
-
-            <Sidebar scroll={scroll} color={''}/>
+            {
+                older &&
+                <Sidebar scroll={scroll} color={''}/>
+            }
             <Header />
         </>
     )

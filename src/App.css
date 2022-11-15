@@ -304,7 +304,7 @@ body {
 .sidebar {
   transform: translateX(-150%);
   height: 60vh;
-  background-color: black !important;
+  background-color: black;
   transition: .3s ease;
 }
 
@@ -321,6 +321,22 @@ body {
 
 .zIndex {
   z-index: 10 !important;
+}
+
+.alert-card {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    transform: translateX(-150%);
+    height: 60vh;
+    background-color: black !important;
+    transition: .3s ease;
+  }
 }
 
 @media screen and (min-width: 767px) {

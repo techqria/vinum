@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import SwiperCore, { Autoplay } from 'swiper';
 
-export const Slider = () => {
+export const Slider: React.FC<any> = ({older}) => {
 
     const [wines, setWines] = useState<WineDto[]>([])
 
@@ -25,7 +25,7 @@ export const Slider = () => {
     SwiperCore.use([Autoplay]);
 
     return (
-        <div className="container py-4 px-4 ">
+        <div className="container py-4 px-4 " style={{ pointerEvents: older ? 'auto' : 'none'  }}>
             <h2 className="mt-5 text-center text-red pb-3">Melhores Ofertas</h2>
             <p className="text-center p-1 fst-italic">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
             <Swiper

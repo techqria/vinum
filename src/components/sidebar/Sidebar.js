@@ -8,9 +8,9 @@ export default function Sidebar({scroll, color}) {
     
     useEffect(() => {
         if (scroll){
-            document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9) !important';
+            document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
         } else{
-            color ? document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9) !important' : document.getElementById('sidebar').style.backgroundColor = "transparent !important";
+            color ? document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)' : document.getElementById('sidebar').style.backgroundColor = "transparent";
         }
     }, [scroll])
 
