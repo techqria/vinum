@@ -23,8 +23,8 @@ export default function Sidebar({scroll, color}) {
                 <Link to="/"><img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></Link>
                 <ul className="text-white d-flex flex-column flex-md-row justify-content-md-center p-5 gap-4">
                     <Link to="/catalogo"><li className="text-red fw-bold">Catálogo</li></Link>
-                    <a href="https://api.whatsapp.com/send?phone=5561996851375"><li className="text-white">Whatsapp</li></a>
-                    <a href="https://www.instagram.com/belavida_bonsvinhos/"><li className="text-white">Instagram</li></a>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=55619968513757&text=Olá,gostaria de saber mais sobre o Vinum!"><li className="text-white">Whatsapp</li></a>
+                    <a target="_blank" href="https://www.instagram.com/belavida_bonsvinhos/"><li className="text-white">Instagram</li></a>
                 </ul>
             </div>
         </nav>

@@ -8,12 +8,17 @@ export const Wines = () => {
 
     const location = useLocation()
 
+    const mainFilter = location.state?.filter;
+
     const [wines, setWines] = useState<WineDto[]>([])
 
     const [categoryFilter, setCategoryFilter] = useState<any[]>([]);
     const [priceFilter, setPriceFilter] = useState<any[]>([]);
 
+    console.log(mainFilter)
+
     useEffect(() => {
+
         api.get("/wine/listAll")
             .then((response) => {
                 response.data.forEach((wine: any) => {
@@ -21,6 +26,9 @@ export const Wines = () => {
                 })
             })
             .catch(err => console.error("ops! ocorreu um erro" + err));
+
+        if (mainFilter) setCategoryFilter(categoryFilter => [...categoryFilter, mainFilter])
+
     }, []);
 
     return (

@@ -26,7 +26,7 @@ export const Wine = ({ wineId }: any) => {
                         <div className="d-flex flex-column">
                             <h3 className='text-center text-decoration-line-through'>De R${wine.price}</h3>
                             <p className="text-center">Por R$ {(wine.sale)}</p>
-                            <a href="https://api.whatsapp.com/send?phone=5561996851375" className="btn btn-gold">COMPRAR</a>
+                            <a target="_blank" href={`https://api.whatsapp.com/send?phone=5561996851375&text=Olá, tenho interesse no produto ${wine.name}\n vinumeventos.com.br/inside/${wine._id}`} className="btn btn-gold">COMPRAR</a>
                         </div>
                     </div>
                 </div>
