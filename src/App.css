@@ -304,15 +304,14 @@ body {
 .sidebar {
   transform: translateX(-150%);
   height: 60vh;
-  background-color: black;
-  transition: solid;
+  background-color: black !important;
+  transition: .3s ease;
 }
 
 .sidebar:hover {
   transform: translateX(0);
   height: 60vh;
   background-color: black;
-  transition: solid;
 }
 
 .button-sidebar:focus+.sidebar {

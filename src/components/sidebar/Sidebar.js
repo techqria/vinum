@@ -19,7 +19,7 @@ export default function Sidebar({scroll, color}) {
 
             <button className="btn btn-default button-sidebar d-md-none position-fixed mt-3 ms-3"><i className="text-red fa-solid fa-2x fa-bars"></i></button>
 
-            <div id="sidebar" className="sidebar d-flex justify-content-md-around flex-column flex-md-row">
+            <div id="sidebar" className="sidebar d-flex justify-content-md-around justify-content-center flex-column flex-md-row">
                 <Link to="/"><img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></Link>
                 <ul className="text-white d-flex flex-column flex-md-row justify-content-md-center p-5 gap-4">
                     <Link to="/catalogo"><li className="text-red fw-bold">Catálogo</li></Link>
