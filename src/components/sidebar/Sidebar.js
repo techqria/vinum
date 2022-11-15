@@ -15,7 +15,7 @@ export default function Sidebar({scroll, color}) {
     }, [scroll])
 
     return (
-        <nav className="zIndex position-fixed">
+        <nav tabIndex="0" className="zIndex position-fixed">
 
             <button className="btn btn-default button-sidebar d-md-none position-fixed mt-3 ms-3"><i className="text-red fa-solid fa-2x fa-bars"></i></button>
 
