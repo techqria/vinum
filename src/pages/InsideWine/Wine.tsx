@@ -18,8 +18,8 @@ export const Wine = ({ wineId }: any) => {
 
     return (
         <section className="container text-center">
-            <h1 className='position-relative'>{wine.name}</h1>
-            <div className="row mt-5 pt-5">
+            <div className="row">
+            <h2 className='marginInside position-relative'>{wine.name}</h2>
                 <div className="col-md-6">
                     <div className="d-flex align-items-center justify-content-center">
                         <img width={250} src={wine.image} alt="garrafaVinho.svg" />
@@ -33,7 +33,7 @@ export const Wine = ({ wineId }: any) => {
 
                 <div className="col-md-6 mt-md-3">
                     <div className="mb-5 d-flex flex-column align-items-center">
-                        <h2 className="pb-2 position-relative text-red">Ficha Técnica</h2>
+                        <h2 className="pb-2 position-relative text-red mt-4">Ficha Técnica</h2>
 
                         <div className="d-flex gap-5">
                             <ul className="d-flex flex-column gap-3 mt-4">
@@ -74,7 +74,7 @@ export const Wine = ({ wineId }: any) => {
 
             <div className="row">
                 <div className="col-md-12">
-                    <div className="mt-5 mb-5 pt-4 pb-4">
+                    <div className=" pt-4 pb-4">
                         <h1 className="pb-2 position-relative">Descrição</h1>
                         <p className="mt-4">{wine.description}</p>
                     </div>

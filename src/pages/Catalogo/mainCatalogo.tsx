@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Wines } from "./Wines"
 import Footer from "../../components/Footer";
-
 import Sidebar from "../../components/sidebar/Sidebar";
-import { Caroulsel } from '../../components/Caroulsel'
-
+import {Slider} from "./Slider"
 
 
 export const Catalogo = () => {
@@ -29,8 +27,7 @@ export const Catalogo = () => {
     return (
         <>
             <Sidebar scroll={scroll} color={'black'}/>
-            <div className="pt-3"></div>
-            <Caroulsel/>
+            <Slider />
             <Wines />
             <Footer />
         </>

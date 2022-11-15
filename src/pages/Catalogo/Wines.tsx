@@ -32,7 +32,7 @@ export const Wines = () => {
     }, []);
 
     return (
-        <section className="container mt-5 pt-5 d-flex position-relative">
+        <section className="container d-flex position-relative">
             <Filter setCategoryFilter={setCategoryFilter} categoryFilter={categoryFilter} priceFilter={priceFilter} setPriceFilter={setPriceFilter} />
 
             <div className="row d-flex gap-5 justify-content-center">
