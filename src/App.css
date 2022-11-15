@@ -27,6 +27,7 @@
 .top-10 {
   top: 10px;
 }
+
 .top-140 {
   top: 140px;
 }
@@ -69,7 +70,8 @@ h1::after {
   width: 4px;
   height: 6px;
 }
-.ofertas{
+
+.ofertas {
   margin-top: 130px;
 }
 
@@ -223,12 +225,12 @@ body {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.card-group div { 
+.card-group div {
   cursor: pointer;
   transition: .4s ease;
 }
 
-.card-group div:hover { 
+.card-group div:hover {
   transform: scale(1.04);
 }
 
@@ -266,56 +268,63 @@ body {
   background-color: transparent;
   border: 1px solid #DD9F31 !important;
 }
-  .btn-outline-gold :focus,
-  .btn-outline-gold :hover,
-  .btn-outline-gold :active {
-    background-color: rgba(#DD9F31) !important;
-  
+
+.btn-outline-gold :focus,
+.btn-outline-gold :hover,
+.btn-outline-gold :active {
+  background-color: rgba(#DD9F31) !important;
+
 }
 
-.catalogo{
+.catalogo {
   padding-top: 120px;
 }
-.inside{
+
+.inside {
   margin-top: 200px;
 }
-.bgCatalogo{
+
+.bgCatalogo {
   margin-left: 170px;
   margin-top: 20px;
 }
-.compra{
+
+.compra {
   margin-top: 250px;
   margin-left: 100px;
 }
-.marginInside{
+
+.marginInside {
   margin-top: 150px;
 }
 
 
 /* NAVBAR AQUI */
 
-.sidebar{
+.sidebar {
   transform: translateX(-150%);
   height: 60vh;
   background-color: black;
   transition: solid;
-
 }
-.button-sidebar:focus + .sidebar{
+
+.sidebar:hover {
+  transform: translateX(0);
+}
+
+.button-sidebar:focus+.sidebar {
   transform: translateX(0);
   padding-top: 100px;
 }
 
-.zIndex{
+.zIndex {
   z-index: 10 !important;
 }
 
 @media screen and (min-width: 767px) {
-  .sidebar{
+  .sidebar {
     transform: translateX(0) !important;
     height: fit-content;
-    width: 100vw !important; 
+    width: 100vw !important;
   }
 }
-
-
