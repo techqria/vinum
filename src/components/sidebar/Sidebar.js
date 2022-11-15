@@ -24,7 +24,7 @@ export default function Sidebar({scroll, color}) {
                 <ul className="text-white d-flex flex-column flex-md-row justify-content-md-center p-5 gap-4">
                     <Link to="/catalogo"><li className="text-red fw-bold">Catálogo</li></Link>
                     <a target="_blank" href="https://api.whatsapp.com/send?phone=55619968513757&text=Olá,gostaria de saber mais sobre o Vinum!"><li className="text-white">Whatsapp</li></a>
-                    <a target="_blank" href="https://www.instagram.com/belavida_bonsvinhos/"><li className="text-white">Instagram</li></a>
+                    <a target="_blank" href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y="><li className="text-white">Instagram</li></a>
                 </ul>
             </div>
         </nav>
