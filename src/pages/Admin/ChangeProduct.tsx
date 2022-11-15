@@ -10,7 +10,7 @@ export const ChangeProduct = () => {
     const [wines, setWines] = useState<WineDto[]>([]);
 
     const [currentWine, setCurrentWine] = useState<WineDto>({
-        _id: '',name: '', price: '', sale: '', category: '', country: '', region: '', vol: '',
+        _id: '', name: '', price: '', sale: '', category: '', country: '', region: '', vol: '',
         coloration: '', alcohol: '', year: '', description: '', image: '',
     })
 
@@ -35,7 +35,7 @@ export const ChangeProduct = () => {
 
         setCurrentWine(newWine);
 
-        if(e.target.id == 'id') getCurrentWine(e.target.value)
+        if (e.target.id == 'id') getCurrentWine(e.target.value)
     }
 
     function editWine(e: any) {
@@ -110,7 +110,14 @@ export const ChangeProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Tipo</label>
-                                <input id="coloration" value={currentWine?.coloration} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <select value={currentWine.coloration} onChange={e => setWine(e)} className="form-control bg-dark text-white" name="" id="coloration">
+                                    <option value="">Escolha um tipo</option>
+                                    <option value="branco">Branco</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="tinto">Tinto</option>
+                                    <option value="espumante">Espumante</option>
+                                    <option value="outros">Outros</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -139,7 +146,7 @@ export const ChangeProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Selecionar Imagem</label>
-                                <input id="image"  onChange={e => setWine(e)} type="file" className="form-control bg-dark text-white" />
+                                <input id="image" onChange={e => setWine(e)} type="file" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                     </div>

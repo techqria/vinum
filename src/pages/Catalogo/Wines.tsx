@@ -45,8 +45,15 @@ export const Wines = () => {
                                         <a href={`/inside/${wine._id}`} className="d-flex flex-column align-items-center">
                                             <img width={150} src={wine.image} alt="garrafaVinho.svg" />
                                             <p>{wine.name}</p>
-                                            <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
-                                            <p>Por R$ {(wine.sale)}</p>
+                                            {
+                                                wine.price != wine.sale ?
+                                                <div className="d-flex flex-column">
+                                                    <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
+                                                    <p>Por R$ {(wine.sale)}</p>
+                                                </div>
+                                                :
+                                                <h4 className=''>R$ {wine.price}</h4>
+                                            }
                                             <a href={`/inside/${wines[0]._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
                                         </a>
                                     </div>

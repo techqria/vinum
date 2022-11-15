@@ -29,13 +29,13 @@ export const Slider = () => {
             <h2 className="mt-5 text-center text-red pb-3">Melhores Ofertas</h2>
             <p className="text-center p-1 fst-italic">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
             <Swiper
-            autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-              }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
                 freeMode={true}
                 grabCursor={true}
                 modules={[FreeMode]}
@@ -63,24 +63,26 @@ export const Slider = () => {
             >
                 {
                     wines.map((wine, index) => {
-                        return (
-                            <SwiperSlide key={index} className="d-flex flex-column justify-content-center align-items-center">
-                                <a href={`/inside/${wine._id}`}><img width={150} src={wine.image} alt="garrafaVinho.svg" /></a>
-                                <p>{wine.name}</p>
-                                <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
-                                <p>Por R$ {(wine.sale)}</p>
-                                <a href={`/inside/${wine._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
-                                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span className="visually-hidden">Previous</span>
-                                </button>
-                                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span className="visually-hidden">Next</span>
-                                </button>
-                            </SwiperSlide>
+                        if (wine.sale != wine.price) {
+                            return (
+                                <SwiperSlide key={index} className="d-flex flex-column justify-content-center align-items-center">
+                                    <a href={`/inside/${wine._id}`}><img width={150} src={wine.image} alt="garrafaVinho.svg" /></a>
+                                    <p>{wine.name}</p>
+                                    <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
+                                    <p>Por R$ {(wine.sale)}</p>
+                                    <a href={`/inside/${wine._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
+                                </SwiperSlide>
 
-                        )
+                            )
+                        }
                     }
                     )
                 }

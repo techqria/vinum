@@ -48,6 +48,14 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                     <label htmlFor="espumante" className="me-1 pointer">Espumantes</label>
                     <input className="pointer" onChange={filterCategory} type="checkbox" id="espumante" />
                 </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="destilados" className="me-1 pointer">Destilados</label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="destilados" />
+                </div>
+                <div className="mb-3 d-flex">
+                    <label htmlFor="champagne" className="me-1 pointer">Champagne</label>
+                    <input className="pointer" onChange={filterCategory} type="checkbox" id="champagne" />
+                </div>
 
             </div>
             <div className="d-flex flex-column border gap-3  border-gold rounded p-4 me-5 mh-300">

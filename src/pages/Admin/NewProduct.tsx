@@ -17,9 +17,13 @@ export const NewProduct = () => {
 
     const [selectedFile, setSelectedFile] = useState<File>();
 
+    const [sale, setSale] = useState('');
+
     function setWine(e: any) {
         const wine: any = { ...newWine };
         wine[e.target.id] = e.target.value;
+
+        if (e.target.id == 'price') setSale(e.target.value)
 
         setNewWine(wine);
     }
@@ -31,7 +35,7 @@ export const NewProduct = () => {
 
         newWine.image = urlImage
 
-        console.log(newWine)
+        if(!newWine.sale) newWine.sale = newWine.price
 
         api.post('/wine/createwine', newWine)
             .then(response => navigate('/admin'))
@@ -67,7 +71,7 @@ export const NewProduct = () => {
 
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Preço com Desconto</label>
-                                <input id="sale" placeholder="R$0,00" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <input id="sale" defaultValue={sale} placeholder="R$0,00" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -87,7 +91,15 @@ export const NewProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Tipo</label>
-                                <input id="coloration" placeholder="Seco, Tinto, Branco" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <select onChange={e => setWine(e)} className="form-control bg-dark text-white" name="" id="coloration">
+                                    <option value="">Escolha um tipo</option>
+                                    <option value="branco">Branco</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="tinto">Tinto</option>
+                                    <option value="espumante">Espumante</option>
+                                    <option value="destilados">Destilados</option>
+                                    <option value="champagne">Champagne</option>
+                                </select>
                             </div>
                         </div>
                     </div>
