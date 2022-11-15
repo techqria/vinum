@@ -13,6 +13,10 @@ export const Main = () => {
 
     const [older, setOlder] = useState(false)
 
+    useEffect(() => {
+        if(localStorage.getItem('older')) setOlder(true)
+    }, [])
+
     window.addEventListener('scroll', () => {
         checkScroll()
     })
