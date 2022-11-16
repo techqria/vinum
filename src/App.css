@@ -234,21 +234,6 @@ body {
   transform: scale(1.04);
 }
 
-.card-title {
-  margin-left: 20%;
-}
-
-.card-text {
-  margin-top: 20%;
-  margin-left: 20%;
-}
-
-.insideCard {
-  margin-top: 20%;
-  margin-left: 50%;
-}
-
-
 .screen_home {
   max-width: 1200px;
   display: flex;
@@ -328,6 +313,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
+}
+.side-btn:hover{
+  color: black;
 }
 
 @media screen and (max-width: 767px) {

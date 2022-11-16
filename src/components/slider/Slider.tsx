@@ -9,9 +9,12 @@ import 'swiper/css/free-mode';
 import SwiperCore, { Autoplay } from 'swiper';
 import { Pagination } from "swiper";
 
+import { Navigation } from "swiper";
+
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import "./styles.css";
 
@@ -46,7 +49,7 @@ export const Slider: React.FC<any> = ({ older }) => {
                 }}
                 freeMode={true}
                 grabCursor={true}
-                modules={[Pagination]}
+                modules={[Pagination, Navigation]}
                 className="mySwiper"
                 slidesPerView={5}
                 spaceBetween={30}
@@ -64,7 +67,7 @@ export const Slider: React.FC<any> = ({ older }) => {
                         spaceBetween: 15,
                     },
                     1280: {
-                        slidesPerView: 5,
+                        slidesPerView: 4,
                         spaceBetween: 30,
                     }
                 }}

@@ -47,5 +47,11 @@ body {
     margin-bottom: 100px;
 }
 
+.swiper-button-prev{
+  color: #A71830 !important;
+}
+.swiper-button-next{
+  color: #A71830 !important;
+}
 
 

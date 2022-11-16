@@ -15,16 +15,16 @@ export default function Sidebar({scroll, color}) {
     }, [scroll])
 
     return (
-        <nav tabIndex="0" className="zIndex position-fixed">
+        <nav className="zIndex position-fixed">
 
             <button className="btn btn-default button-sidebar d-md-none position-fixed mt-3 ms-3" ontouchstart=""><i className="text-red fa-solid fa-2x fa-bars"></i></button>
 
-            <div id="sidebar" tabindex="0" className="sidebar d-flex justify-content-md-around justify-content-center flex-column flex-md-row">
+            <div id="sidebar" className="sidebar d-flex justify-content-md-around justify-content-center flex-column flex-md-row">
                 <Link to="/"><img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></Link>
                 <ul className="text-white d-flex flex-column flex-md-row justify-content-md-center p-5 gap-4">
-                    <Link to="/catalogo"><li className="text-red fw-bold">Catálogo</li></Link>
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=55619968513757&text=Olá,gostaria de saber mais sobre o Vinum!"><li className="text-white">Whatsapp</li></a>
-                    <a target="_blank" href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y="><li className="text-white">Instagram</li></a>
+                    <Link to="/catalogo"><li className="side-btn text-red fw-bold">Catálogo</li></Link>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=55619968513757&text=Olá, gostaria de saber mais sobre o Vinum!"><li className="side-btn text-white">Whatsapp</li></a>
+                    <a target="_blank" href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y="><li className="side-btn text-white">Instagram</li></a>
                 </ul>
             </div>
         </nav>
