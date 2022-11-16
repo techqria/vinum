@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MainHeader } from '../../components/header/MainHeader';
 import { Menu } from "./Menu";
 import Footer from "../../components/Footer";

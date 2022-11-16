@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react"
 
 export const Alert: React.FC<any> = ({ older, setOlder }) => {
 
-/*     useEffect(() => {
-        if (older) localStorage.setItem('older', true)
+     useEffect(() => {
+        if (older) localStorage.setItem('older', 'true')
     }, [older])
- */
+ 
     return (
         <section className="position-fixed bg-dark alert-card p-5 flex-column" style={{ display: older ? 'none' : 'flex' }}>
             <h2 className="text-white">Você é maior de 18 anos?</h2>
