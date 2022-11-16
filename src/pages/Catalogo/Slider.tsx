@@ -9,6 +9,7 @@ import 'swiper/css/free-mode';
 import SwiperCore, { Autoplay } from 'swiper';
 
 import { Pagination } from "swiper";
+import { Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -45,7 +46,7 @@ export const Slider = () => {
                     dynamicBullets: true,
                   }} freeMode={true}
                 grabCursor={true}
-                modules={[Pagination]}
+                modules={[Pagination, Navigation]}
                 className="mySwiper"
                 slidesPerView={5}
                 spaceBetween={30}
@@ -63,7 +64,7 @@ export const Slider = () => {
                         spaceBetween: 15,
                     },
                     1280: {
-                        slidesPerView: 5,
+                        slidesPerView: 4,
                         spaceBetween: 30,
                     }
                 }}

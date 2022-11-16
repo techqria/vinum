@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Wines } from "./Wines"
 import Footer from "../../components/Footer";
 import Sidebar from "../../components/sidebar/Sidebar";
-import {Slider} from "./Slider"
+import {Slider} from "./Slider";
 
 
 export const Catalogo = () => {
