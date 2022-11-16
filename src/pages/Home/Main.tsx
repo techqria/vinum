@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { MainHeader } from '../../components/header/MainHeader';
 import { Menu } from "./Menu";
 import Footer from "../../components/Footer";
-import { Slider } from "../../components/Slider";
+import { Slider } from "../../components/slider/Slider";
 import { Alert } from "../../components/Alert";
 import { Cards } from "./Cards";
 

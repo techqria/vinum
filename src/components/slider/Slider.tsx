@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import api from "../api/api";
-import { WineDto } from "../dto/wine.dto";
+
+import api from "../../api/api";
+import { WineDto } from "../../dto/wine.dto";
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode } from 'swiper';
+
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import SwiperCore, { Autoplay } from 'swiper';
-import { Navigation } from "swiper";
+import { Pagination } from "swiper";
 
 
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import "../App.css";
+import "./styles.css";
 
-export const Slider: React.FC<any> = ({older}) => {
+export const Slider: React.FC<any> = ({ older }) => {
 
     const [wines, setWines] = useState<WineDto[]>([])
 
@@ -32,21 +32,21 @@ export const Slider: React.FC<any> = ({older}) => {
     SwiperCore.use([Autoplay]);
 
     return (
-        <div className="py-4 px-4 " style={{ pointerEvents: older ? 'auto' : 'none'  }}>
+        <div className="py-4 px-4 " style={{ pointerEvents: older ? 'auto' : 'none' }}>
             <h2 className="mt-5 text-center text-red pb-3">Melhores Ofertas</h2>
             <p className="text-center p-1 fst-italic">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
             <Swiper
-            navigation={true}
+                navigation={true}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
                 pagination={{
-                    clickable: true,
+                    dynamicBullets: true,
                 }}
                 freeMode={true}
                 grabCursor={true}
-                modules={[Navigation]}
+                modules={[Pagination]}
                 className="mySwiper"
                 slidesPerView={5}
                 spaceBetween={30}
@@ -79,14 +79,6 @@ export const Slider: React.FC<any> = ({older}) => {
                                     <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
                                     <p>Por R$ {(wine.sale)}</p>
                                     <a href={`/inside/${wine._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
-                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
                                 </SwiperSlide>
 
                             )

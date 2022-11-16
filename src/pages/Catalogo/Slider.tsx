@@ -8,11 +8,10 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import SwiperCore, { Autoplay } from 'swiper';
 
-import { Navigation } from "swiper";
-
+import { Pagination } from "swiper";
 
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import "../../App.css";
 
@@ -43,10 +42,10 @@ export const Slider = () => {
                     disableOnInteraction: false,
                 }}
                 pagination={{
-                    clickable: true,
-                }} freeMode={true}
+                    dynamicBullets: true,
+                  }} freeMode={true}
                 grabCursor={true}
-                modules={[Navigation]}
+                modules={[Pagination]}
                 className="mySwiper"
                 slidesPerView={5}
                 spaceBetween={30}
@@ -79,14 +78,6 @@ export const Slider = () => {
                                     <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
                                     <p>Por R$ {(wine.sale)}</p>
                                     <a href={`/inside/${wine._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
-                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
                                 </SwiperSlide>
 
                             )
