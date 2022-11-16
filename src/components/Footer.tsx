@@ -14,16 +14,12 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div>
-                <p>Bem vindo ao website vinumeventos.com.br, onde todos os serviços são ofertados pela empresa Vinum Wine Eventos, cujo nome/função social é Michelle Meira Alves Ltda,
-                    inscrita sob o CNPJ número 34.173679/0001-32, com sede na Quadra SQNW 309 Bloco B Apto: 101. - Setor Noroeste - Brasília/DF</p> </div>
-
-            <div className="d-flex justify-content-center text-center mt-2 mb-4">
-                E-mail: vinum.wineeventos@gmail.com
-                <br />
-                Telefone: (61) 996851375
-                <br />
-                CEP: 70687-110
+    
+            <div className="d-column justify-content-center text-center mt-2 mb-5">
+                <p><b>E-mail</b>: vinum.wineeventos@gmail.com</p>
+                <p><b>Telefone</b>: (61) 996851375</p>
+                <p><b>CNPJ</b>: 34.173679/0001-32</p>
+                SQNW 309 Bloco B - Brasília/DF
             </div>
 
 
