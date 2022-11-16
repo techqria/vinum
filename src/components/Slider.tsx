@@ -7,6 +7,13 @@ import { FreeMode } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import SwiperCore, { Autoplay } from 'swiper';
+import { Navigation } from "swiper";
+
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import "../App.css";
 
 export const Slider: React.FC<any> = ({older}) => {
 
@@ -25,10 +32,11 @@ export const Slider: React.FC<any> = ({older}) => {
     SwiperCore.use([Autoplay]);
 
     return (
-        <div className="container py-4 px-4 " style={{ pointerEvents: older ? 'auto' : 'none'  }}>
+        <div className="py-4 px-4 " style={{ pointerEvents: older ? 'auto' : 'none'  }}>
             <h2 className="mt-5 text-center text-red pb-3">Melhores Ofertas</h2>
             <p className="text-center p-1 fst-italic">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
             <Swiper
+            navigation={true}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
@@ -38,7 +46,7 @@ export const Slider: React.FC<any> = ({older}) => {
                 }}
                 freeMode={true}
                 grabCursor={true}
-                modules={[FreeMode]}
+                modules={[Navigation]}
                 className="mySwiper"
                 slidesPerView={5}
                 spaceBetween={30}

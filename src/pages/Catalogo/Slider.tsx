@@ -8,6 +8,14 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import SwiperCore, { Autoplay } from 'swiper';
 
+import { Navigation } from "swiper";
+
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import "../../App.css";
+
 export const Slider = () => {
 
     const [wines, setWines] = useState<WineDto[]>([])
@@ -25,11 +33,11 @@ export const Slider = () => {
     SwiperCore.use([Autoplay]);
 
     return (
-        <div className="container py-4 px-4">
+        <div className="py-4 px-4">
             <h2 className="ofertas text-center text-red pb-3">Melhores Ofertas</h2>
             <p className="text-center p-1">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
             <Swiper
-
+                navigation={true}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
@@ -38,7 +46,7 @@ export const Slider = () => {
                     clickable: true,
                 }} freeMode={true}
                 grabCursor={true}
-                modules={[FreeMode]}
+                modules={[Navigation]}
                 className="mySwiper"
                 slidesPerView={5}
                 spaceBetween={30}
@@ -71,6 +79,14 @@ export const Slider = () => {
                                     <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
                                     <p>Por R$ {(wine.sale)}</p>
                                     <a href={`/inside/${wine._id}`} className="btn btn-gold mw-120">APROVEITAR</a>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
                                 </SwiperSlide>
 
                             )
