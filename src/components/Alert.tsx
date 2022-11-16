@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 export const Alert: React.FC<any> = ({older, setOlder}) => {
 
     useEffect(() => {
-        if(older) localStorage.setItem('older', true)
+        if(older) localStorage.setItem('older', 'true')
     }, [older])
 
     return (
