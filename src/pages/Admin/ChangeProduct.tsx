@@ -56,9 +56,9 @@ export const ChangeProduct = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Selecionar Vinho</label>
+                                <label htmlFor="" className="form-label text-white">Selecionar</label>
                                 <select id="id" onChange={e => setWine(e)} className="form-control bg-dark text-white">
-                                    <option key="default" value="default">Selecionar Vinho</option>
+                                    <option key="default" value="default">Selecionar</option>
                                     {
                                         wines.map(wine => (
                                             <option key={wine._id} value={wine._id}>{wine.name}</option>
@@ -73,7 +73,7 @@ export const ChangeProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Nome</label>
-                                <input id="name" value={currentWine?.name} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <input id="name" maxLength={35} value={currentWine?.name} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -110,22 +110,29 @@ export const ChangeProduct = () => {
                                     <option value="rose">Rose</option>
                                     <option value="tinto">Tinto</option>
                                     <option value="espumante">Espumante</option>
-                                    <option value="outros">Outros</option>
+                                    <option value="champagne">Champagne</option>
                                 </select>
                             </div>
                         </div>
-                    </div>
-                    <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Ano</label>
                                 <input id="year" value={currentWine?.year} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
+                    </div>
+                    <div className="row">
+                        
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Teor Alcólico</label>
                                 <input id="alcohol" value={currentWine?.alcohol} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="mb-3">
+                                <label htmlFor="" className="form-label text-white">Selecionar Imagem</label>
+                                <input id="image" onChange={e => setWine(e)} type="file" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                     </div>
@@ -137,12 +144,7 @@ export const ChangeProduct = () => {
                                 <textarea id="description" value={currentWine?.description} required onChange={e => setWine(e)} className="form-control bg-dark text-white" ></textarea>
                             </div>
                         </div>
-                        <div className="col-md-6">
-                            <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Selecionar Imagem</label>
-                                <input id="image" onChange={e => setWine(e)} type="file" className="form-control bg-dark text-white" />
-                            </div>
-                        </div>
+                        
                     </div>
 
                     <div className="mt-4 mb-3 d-flex justify-content-center">

@@ -66,20 +66,20 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                     Filtrar por preço <i className="fa-solid fa-arrow-down-long"></i>
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="50" />
-                    <label htmlFor="50" className="me-1 pointer">R$ 30 - 100</label>
+                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="30" />
+                    <label htmlFor="30" className="me-1 pointer">R$ 30 - 100</label>
                 </div>
                 <div className="mb-3 d-flex">
                     <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="100" />
                     <label htmlFor="100" className="me-1 pointer">R$ 100 - 300</label>
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="150" />
-                    <label htmlFor="150" className="me-1 pointer">R$ 300 - 500</label>
+                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="300" />
+                    <label htmlFor="300" className="me-1 pointer">R$ 300 - 500</label>
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="200" />
-                    <label htmlFor="200" className="me-1 pointer">Acima de R$500 </label>
+                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="500" />
+                    <label htmlFor="500" className="me-1 pointer">Acima de R$500 </label>
                 </div>
 
             </div>

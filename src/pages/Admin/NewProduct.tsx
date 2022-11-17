@@ -55,7 +55,7 @@ export const NewProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Nome</label>
-                                <input id="name" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <input  maxLength={35} id="name" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -76,18 +76,15 @@ export const NewProduct = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Categoria</label>
-                                <input id="category" placeholder="Vinho, Espumante, Rose" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <label htmlFor="" className="form-label text-white">Teor Alcólico</label>
+                                <input id="alcohol" placeholder="12,5%" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
+                        
                     </div>
+
                     <div className="row">
-                        <div className="col-md-6">
-                            <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Região</label>
-                                <input id="region" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
-                            </div>
-                        </div>
+                        
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Tipo</label>
@@ -102,50 +99,45 @@ export const NewProduct = () => {
                                 </select>
                             </div>
                         </div>
-                    </div>
-                    <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">País</label>
                                 <input id="country" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
+                    </div>
+                    <div className="row">
+                        
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Volume</label>
-                                <input id="vol" placeholder="Seco, Tinto, Branco" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <input id="vol" placeholder="750ml" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
-                    </div>
-                    <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Ano</label>
                                 <input id="year" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
-                        <div className="col-md-6">
-                            <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Teor Alcólico</label>
-                                <input id="alcohol" placeholder="12,5" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
-                            </div>
-                        </div>
                     </div>
-
                     <div className="row">
-                        <div className="col-md-6">
-                            <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Descrição</label>
-                                <textarea id="description" required onChange={e => setWine(e)} className="form-control bg-dark text-white" ></textarea>
-                            </div>
-                        </div>
+                        
+                        
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Selecionar Imagem</label>
                                 <input id="image" onChange={handleImage} type="file" className="form-control bg-dark text-white" />
                             </div>
                         </div>
+                        <div className="col-md-6">
+                            <div className="mb-3">
+                                <label htmlFor="" className="form-label text-white">Descrição</label>
+                                <textarea id="description" required onChange={e => setWine(e)} className="form-control bg-dark text-white" ></textarea>
+                            </div>
+                        </div>
                     </div>
+
 
                     <div className="mt-4 mb-3 d-flex justify-content-center">
                         <button className="btn btn-primary">ADICIONAR</button>
