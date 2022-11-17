@@ -10,8 +10,8 @@ export const NewProduct = () => {
 
     const [newWine, setNewWine] = useState<WineDto>(
         {
-            name: '', price: '', sale: '', category: '', country: '', region: '', vol: '',
-            coloration: '', alcohol: '', year: '', description: '', image: '',
+            name: '', price: '', sale: '', category: '', country: '',  vol: '',
+           alcohol: '', year: '', description: '', image: '',
         }
     )
 

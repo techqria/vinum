@@ -10,8 +10,8 @@ export const ChangeProduct = () => {
     const [wines, setWines] = useState<WineDto[]>([]);
 
     const [currentWine, setCurrentWine] = useState<WineDto>({
-        _id: '', name: '', price: '', sale: '', category: '', country: '', region: '', vol: '',
-        coloration: '', alcohol: '', year: '', description: '', image: '',
+        _id: '', name: '', price: '', sale: '', category: '', country: '', vol: '',
+        alcohol: '', year: '', description: '', image: '',
     })
 
     useEffect(() => {
@@ -94,23 +94,17 @@ export const ChangeProduct = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="mb-3">
-                                <label htmlFor="" className="form-label text-white">Categoria</label>
-                                <input id="category" value={currentWine?.category} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-md-6">
-                            <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Região</label>
                                 <input id="country" value={currentWine?.country} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
+                    </div>
+                    
+                    <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Tipo</label>
-                                <select value={currentWine.coloration} onChange={e => setWine(e)} className="form-control bg-dark text-white" name="" id="coloration">
+                                <select value={currentWine.category} onChange={e => setWine(e)} className="form-control bg-dark text-white" name="" id="coloration">
                                     <option value="">Escolha um tipo</option>
                                     <option value="branco">Branco</option>
                                     <option value="rose">Rose</option>
