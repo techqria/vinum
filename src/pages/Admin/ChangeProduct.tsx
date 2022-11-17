@@ -99,12 +99,12 @@ export const ChangeProduct = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Tipo</label>
-                                <select value={currentWine.category} onChange={e => setWine(e)} className="form-control bg-dark text-white" name="" id="coloration">
+                                <select value={currentWine.category} onChange={e => setWine(e)} className="form-control bg-dark text-white" name="" id="category">
                                     <option value="">Escolha um tipo</option>
                                     <option value="branco">Branco</option>
                                     <option value="rose">Rose</option>

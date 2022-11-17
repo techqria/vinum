@@ -5,8 +5,8 @@ import { WineDto } from "../../dto/wine.dto";
 export const Wine = ({ wineId }: any) => {
 
     const [wine, setWine] = useState<WineDto>({
-        name: '', price: '', sale: '', category: '', country: '', region: '',
-        vol: '', coloration: '', alcohol: '', description: '', image: '', year: ''
+        name: '', price: '', sale: '', category: '', country: '',
+        vol: '', alcohol: '', description: '', image: '', year: ''
     })
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export const Wine = ({ wineId }: any) => {
     return (
         <section className="container text-center">
             <div className="row">
-            <h2 className='marginInside position-relative'>{wine.name}</h2>
+                <h2 className='marginInside position-relative'>{wine.name}</h2>
                 <div className="col-md-6">
                     <div className="d-flex align-items-center justify-content-center">
                         <img width={250} src={wine.image} alt="garrafaVinho.svg" />
@@ -47,7 +47,7 @@ export const Wine = ({ wineId }: any) => {
                                 </li>
                                 <li>
                                     <p className="fw-bold mb-0">Tipo</p>
-                                    <p>{wine.coloration}</p>
+                                    <p>{wine.category}</p>
                                 </li>
 
                             </ul>

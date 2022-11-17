@@ -39,7 +39,7 @@ export const Wines = () => {
             <h2 id="headerCatalogo" className="d-flex justify-content-center text-red">Catálogo Completo</h2>
                 {
                     wines.map((wine, index) => {
-                        if (categoryFilter.find(category => category == wine.coloration) || (categoryFilter.length == 0)) {
+                        if (categoryFilter.find(category => category == wine.category) || (categoryFilter.length == 0)) {
                             if (priceFilter.find(price => parseInt(wine.price) >= parseInt(price)) && priceFilter.find(price => parseInt(wine.price) <= parseInt(price) + 50) || (priceFilter.length == 0)) {
                                 return (
                                     
