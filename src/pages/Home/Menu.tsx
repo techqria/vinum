@@ -4,7 +4,7 @@ export const Menu: React.FC<any> = ({older}) => {
 
     return (
         <section className="container mt-2 pt-2 mb-5" style={{ pointerEvents: older ? 'auto' : 'none' }}>
-            <h1 className="pb-2 text-center position-relative mb-5">NOSSO CATÁLOGO</h1>
+            <h1 id="headerMenu" className="pb-2 text-center position-relative mb-5">NOSSO CATÁLOGO</h1>
             <p className="text-center mb-5">
                 A Vinum Wine Eventos oferece excelentes rótulos de vinhos, espumantes e destilados para
                 atender todos os tipos de gostos e ocasiões! Mais do que boas opções e preços justos,

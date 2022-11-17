@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import SwiperCore, { Autoplay } from 'swiper';
 
-import { Pagination } from "swiper";
+
 import { Navigation } from "swiper";
 
 import "swiper/css";
@@ -33,7 +33,7 @@ export const Slider = () => {
     SwiperCore.use([Autoplay]);
 
     return (
-        <div className="py-4 px-4">
+        <div className="py-5 px-5">
             <h2 className="ofertas text-center text-red pb-3">Melhores Ofertas</h2>
             <p className="text-center p-1">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
             <Swiper
@@ -42,11 +42,9 @@ export const Slider = () => {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
-                pagination={{
-                    dynamicBullets: true,
-                  }} freeMode={true}
+ freeMode={true}
                 grabCursor={true}
-                modules={[Pagination, Navigation]}
+                modules={[Navigation]}
                 className="mySwiper"
                 slidesPerView={5}
                 spaceBetween={30}

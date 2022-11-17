@@ -36,12 +36,14 @@ export const Wines = () => {
             <Filter setCategoryFilter={setCategoryFilter} categoryFilter={categoryFilter} priceFilter={priceFilter} setPriceFilter={setPriceFilter} />
 
             <div className="row d-flex gap-5 justify-content-center">
+            <h2 id="headerCatalogo" className="d-flex justify-content-center text-red">Catálogo Completo</h2>
                 {
                     wines.map((wine, index) => {
                         if (categoryFilter.find(category => category == wine.coloration) || (categoryFilter.length == 0)) {
                             if (priceFilter.find(price => parseInt(wine.price) >= parseInt(price)) && priceFilter.find(price => parseInt(wine.price) <= parseInt(price) + 50) || (priceFilter.length == 0)) {
                                 return (
-                                    <div key={index} className="col-md-3 mt-5 d-flex flex-column align-items-center justify-content-center">
+                                    
+                                    <div key={index} className="col-md-3 d-flex flex-column align-items-center justify-content-center">
                                         <a href={`/inside/${wine._id}`} className="d-flex flex-column align-items-center">
                                             <img width={150} src={wine.image} alt="garrafaVinho.svg" />
                                             <p>{wine.name}</p>
