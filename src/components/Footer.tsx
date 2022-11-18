@@ -12,7 +12,7 @@ export default function Footer() {
                     <div className="mt-4 d-flex flex-column">
                         <h4 className=" mb-2 text-white">Nossas redes sociais</h4>
 
-                        <div className="text-white gap-5 mt-2 d-flex justify-content-center mt-3">
+                        <div className="text-white gap-5 mt-2 d-flex justify-content-center mt-3 mb-3">
                             <a href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y=" target="_blank">
                                 <i className=" fa-brands fa-instagram text-white fa-2xl"></i>
                             </a>

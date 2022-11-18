@@ -4,20 +4,29 @@ import { Link } from "react-router-dom";
 
 
 
-export default function Sidebar({scroll, color}) {
-    
+export default function Sidebar({ scroll, color }) {
+
     useEffect(() => {
-        if (scroll){
+        if (scroll) {
             document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-        } else{
+        } else {
             color ? document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)' : document.getElementById('sidebar').style.backgroundColor = "transparent";
         }
     }, [scroll])
+    
+    function showSidebar() {
+        if (this.sidebar) {
+            this.sidebar = false;
+        } else {
+            this.sidebar = true;
+        }
+    }
 
     return (
+
         <nav className="zIndex position-fixed">
 
-            <button className="btn btn-default button-sidebar d-md-none position-fixed mt-3 ms-3" tabindex="0"><i className="text-red fa-solid fa-2x fa-bars"></i></button>
+            <button onClick={() => showSidebar(true)} className="btn btn-default button-sidebar d-md-none position-fixed mt-3 ms-3" tabindex="0"><i className="text-red fa-solid fa-2x fa-bars"></i></button>
 
             <div id="sidebar" className="sidebar d-flex justify-content-md-around justify-content-center flex-column flex-md-row">
                 <Link to="/" tabindex="0"><img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></Link>
