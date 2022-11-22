@@ -24,7 +24,7 @@ export const Wine = ({ wineId }: any) => {
                     <div className="d-flex align-items-center justify-content-center">
                         <img width={250} src={wine.image} alt="garrafaVinho.svg" />
                         <div className="d-flex flex-column">
-                            <h3 className='text-center text-decoration-line-through'>De R${wine.price}</h3>
+                            <h3 className='text-center text-decoration-line-through mb-1'>De R${wine.price}</h3>
                             <p className="text-center">Por R$ {(wine.sale)}</p>
                             <a target="_blank" href={`https://api.whatsapp.com/send?phone=5561996851375&text=Olá, tenho interesse no produto ${wine.name}\n vinumeventos.com.br/inside/${wine._id}`} className="btn btn-gold">COMPRAR</a>
                         </div>
@@ -36,6 +36,7 @@ export const Wine = ({ wineId }: any) => {
                         <h2 className="pb-2 position-relative text-red mt-4">Ficha Técnica</h2>
 
                         <div className="d-flex gap-5">
+
                             <ul className="d-flex flex-column gap-3 mt-4">
                                 <li>
                                     <p className="fw-bold mb-0">País de origem</p>
@@ -46,10 +47,9 @@ export const Wine = ({ wineId }: any) => {
                                     <p>{wine.vol}</p>
                                 </li>
                                 <li>
-                                    <p className="fw-bold mb-0">Tipo</p>
-                                    <p>{wine.category}</p>
+                                    <p className="fw-bold mb-0">Safra</p>
+                                    <p>{wine.year}</p>
                                 </li>
-
                             </ul>
 
                             <ul className="d-flex flex-column gap-3 mt-4">
@@ -61,10 +61,7 @@ export const Wine = ({ wineId }: any) => {
                                     <p className="fw-bold mb-0">Teor Alcólico</p>
                                     <p>{wine.alcohol}</p>
                                 </li>
-                                <li>
-                                    <p className="fw-bold mb-0">Safra</p>
-                                    <p>{wine.year}</p>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>

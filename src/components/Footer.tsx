@@ -34,7 +34,7 @@ export default function Footer() {
                         <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-4">
 
                             <h6 className="text-uppercase fw-bold text-red">Redes Sociais</h6>
-                            <p><i className="fas fa-envelope mr-3 me-2"></i> vinumwineeventos@gmail.com</p>
+                            <p><i className="fas fa-envelope mr-3 me-2"></i>vinum.wineeventos@gmail.com</p>
                             <a href="https://api.whatsapp.com/send?phone=55619968513757&text=Olá, gostaria de saber mais sobre o Vinum!"><p className="text-white"><i className="fa-brands fa-whatsapp mr-3 me-2 text-white"></i>(61) 99685-1375</p></a>
                             <a href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y="><p className="text-white"><i className="fa-brands fa-instagram mr-3 me-2 text-white"></i>vinum_wineeventos</p></a>
                         </div>

@@ -13,7 +13,7 @@ export default function Sidebar({ scroll, color }) {
             color ? document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)' : document.getElementById('sidebar').style.backgroundColor = "transparent";
         }
     }, [scroll])
-    
+
     function showSidebar() {
         if (this.sidebar) {
             this.sidebar = false;
@@ -23,8 +23,9 @@ export default function Sidebar({ scroll, color }) {
     }
 
     return (
+        <>
 
-        <nav className="zIndex position-fixed">
+        <nav nav className="zIndex position-fixed">
 
             <button onClick={() => showSidebar(true)} className="btn btn-default button-sidebar d-md-none position-fixed mt-3 ms-3" tabindex="0"><i className="text-red fa-solid fa-2x fa-bars"></i></button>
 
@@ -37,5 +38,8 @@ export default function Sidebar({ scroll, color }) {
                 </ul>
             </div>
         </nav>
-    )
+        
+        </>
+        
+    ) 
 }
