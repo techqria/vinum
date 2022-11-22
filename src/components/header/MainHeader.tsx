@@ -6,7 +6,7 @@ import SidebarMobile from '../sidebar/sidebarMobile'
 
 export const MainHeader: React.FC<any> = ({scroll, older}) => {
     return (
-        <>
+        <> 
             {
                  older && 
                 <Sidebar scroll={scroll} color={''}/>

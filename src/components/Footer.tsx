@@ -1,27 +1,63 @@
+import React from "react"
+
 export default function Footer() {
     return (
-        <footer id="footer" className="row m-0 mt-3">
-
-                <div className="text-white d-flex flex-column align-items-center gap-2 mt-4">
-                    <p><b>Vinum Wine Eventos</b></p>
-                    <p><b>E-mail</b>: vinum.wineeventos@gmail.com</p>
-                    <p><b>CNPJ</b>: 34.173679/0001-32</p>
-                    SQNW 309 Bloco B - Brasília/DF
+        <div className="">
 
 
-                    <div className="mt-4 d-flex flex-column">
-                        <h4 className=" mb-2 text-white">Nossas redes sociais</h4>
+            <footer
+                className="text-center text-lg-start text-white mt-5"
+                style={{ backgroundColor: "#000000" }}
+            >
 
-                        <div className="text-white gap-5 mt-2 d-flex justify-content-center mt-3 mb-3">
-                            <a href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y=" target="_blank">
-                                <i className=" fa-brands fa-instagram text-white fa-2xl"></i>
-                            </a>
-                            <a href="https://api.whatsapp.com/send?phone=5561996851375" target="_blank">
-                                <i className=" fa-brands fa-whatsapp text-white fa-2xl"></i>
-                            </a>
+                <section className="">
+
+
+                    <div className="row">
+
+                        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                            <img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" />
                         </div>
+
+                        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <h6 className="text-uppercase text-red fw-bold mt-4">Vinum Wine Eventos</h6>
+                            <p>
+                                <i className="fas fa-home mr-3 me-2"></i><a href="#!" className="text-white">SQNW 309 Bloco B - Brasília/DF</a>
+                            </p>
+                            <p>
+                                <i className="fas fa-print mr-3 me-2"></i> <a href="#!" className="text-white">34173679/0001-32</a>
+                            </p>
+                        </div>
+
+                        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-4">
+
+                            <h6 className="text-uppercase fw-bold text-red">Redes Sociais</h6>
+                            <p><i className="fas fa-envelope mr-3 me-2"></i> vinumwineeventos@gmail.com</p>
+                            <a href="https://api.whatsapp.com/send?phone=55619968513757&text=Olá, gostaria de saber mais sobre o Vinum!"><p className="text-white"><i className="fa-brands fa-whatsapp mr-3 me-2 text-white"></i>(61) 99685-1375</p></a>
+                            <a href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y="><p className="text-white"><i className="fa-brands fa-instagram mr-3 me-2 text-white"></i>vinum_wineeventos</p></a>
+                        </div>
+
                     </div>
+
+
+                </section>
+
+                <div
+                    className="text-center p-3 text-black"
+                    style={{ backgroundColor: "#fafafa" }}
+                >
+                    © 2022 Copyright: 
+                    <a className="text-black" href="qriatech.com.br"
+                    > qriatech.com.br</a
+                    >
                 </div>
-        </footer>
+
+            </footer>
+
+
+        </div>
+
     )
 }
