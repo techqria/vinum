@@ -378,3 +378,9 @@ body {
  .zIndex {
   z-index: 10 !important;
 }
+.navbar-brand{
+  padding-right: 2rem;
+}
+.navbar {
+  margin-top: 0;
+}

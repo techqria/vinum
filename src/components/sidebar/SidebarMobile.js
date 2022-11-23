@@ -14,7 +14,7 @@ export default function SidebarMobile({ scroll, color }) {
 
     return (
 
-        <nav id="navbar" className="zIndex navbar navbar-expand-lg bg-black position-fixed w-100">
+        <nav id="navbar" className="zIndex navbar navbar-expand-lg bg-black position-fixed w-100 m-0 p-0">
             <div className="container-fluid">
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@ export default function SidebarMobile({ scroll, color }) {
                         <li className="nav-item">
                         </li>' '
                         <li className="nav-item">
-                            <a className="nav-link text-white" href="https://api.whatsapp.com/send?phone=55619968513757&text=Olá, gostaria de saber mais sobre o Vinum!">Whatsapp</a>
+                            <a className="nav-link text-white" href="https://api.whatsapp.com/send?phone=5561996851375&text=Olá, gostaria de saber mais sobre o Vinum!">Whatsapp</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-white" href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y=">Instagram</a>

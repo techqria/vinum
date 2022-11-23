@@ -13,7 +13,7 @@ export default function Footer() {
                 <section className="">
 
 
-                    <div className="row">
+                    <div className="row w-100">
 
                         <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
@@ -45,7 +45,7 @@ export default function Footer() {
                 </section>
 
                 <div
-                    className="text-center p-3 text-black"
+                    className="text-center p-3 text-black w-100"
                     style={{ backgroundColor: "#fafafa" }}
                 >
                     © 2022 Copyright: 
