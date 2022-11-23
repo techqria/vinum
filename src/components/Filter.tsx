@@ -17,7 +17,7 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
 
     useEffect(() => {
         if (priceValues) {
-            if (priceFilter.filter((price: any) => price == priceValues).length > 0) {
+            if (priceFilter.find((price: any) => (price.min == priceValues.min && price.max == priceValues.max))) {
                 const remove = [...priceFilter];
 
                 const index = priceFilter.indexOf(priceValues);
@@ -42,16 +42,16 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                     Filtrar por categoria
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterCategory} type="checkbox" id="branco" />
+                    <input checked={categoryFilter == 'branco' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="branco" />
                     <label htmlFor="branco" className="me-1 pointer">Brancos</label>
 
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterCategory} type="checkbox" id="rose" />
+                    <input checked={categoryFilter == 'rose' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="rose" />
                     <label htmlFor="rose" className="me-1 pointer">Roses</label>
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterCategory} type="checkbox" id="tinto" />
+                    <input checked={categoryFilter == 'tinto' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="tinto" />
                     <label htmlFor="tinto" className="me-1 pointer">Tintos</label>
                 </div>
                 <div className="mb-3 d-flex">

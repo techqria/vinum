@@ -15,12 +15,7 @@ export const Main = () => {
 
     useEffect(() => {
         if(localStorage.getItem('older')) setOlder(true)
-        console.log('effect')
     }, [])
-
-    useEffect(() => {
-        console.log('scroll')
-    }, [scroll])
 
     window.addEventListener('scroll', () => {
         checkScroll()

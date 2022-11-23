@@ -48,10 +48,8 @@ export default function Footer() {
                     className="text-center p-3 text-black w-100"
                     style={{ backgroundColor: "#fafafa" }}
                 >
-                    © 2022 Copyright: 
-                    <a className="text-black" href="qriatech.com.br"
-                    > qriatech.com.br</a
-                    >
+                    © 2022
+                    <a className="text-black" href="https://qriatech.com.br" target="_blank"> qriatech.com.br</a>
                 </div>
 
             </footer>
