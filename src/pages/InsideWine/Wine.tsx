@@ -6,7 +6,7 @@ export const Wine = ({ wineId }: any) => {
 
     const [wine, setWine] = useState<WineDto>({
         name: '', price: '', sale: '', category: '', country: '',
-        vol: '', alcohol: '', description: '', image: '', year: ''
+        vol: '', grapes: '', alcohol: '', description: '', image: '', year: ''
     })
 
     useEffect(() => {
@@ -60,6 +60,10 @@ export const Wine = ({ wineId }: any) => {
                                 <li>
                                     <p className="fw-bold mb-0">Teor Alcólico</p>
                                     <p>{wine.alcohol}</p>
+                                </li>
+                                <li>
+                                    <p className="fw-bold mb-0">Uva(s)</p>
+                                    <p>{wine.grapes}</p>
                                 </li>
                                 
                             </ul>

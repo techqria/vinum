@@ -14,7 +14,7 @@ export default function SidebarMobile({ scroll, color }) {
 
     return (
 
-        <nav id="navbar" className="zIndex navbar navbar-expand-lg bg-black position-fixed w-100 m-0 p-0">
+        <nav id="navbar" className="zIndex navbar navbar-expand-lg bg-black position-fixed w-100 m-0 p-0 justify-content-center">
             <div className="container-fluid">
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -23,10 +23,10 @@ export default function SidebarMobile({ scroll, color }) {
 
                 <div className="collapse navbar-collapse" id="navbarNav">
 
-                    <ul className="navbar-nav">
-                        <Link to="/catalogo"><li id="catalogoLink" className="text-red fw-bold list-unstyled">Catálogo</li></Link>
-                        <li className="nav-item">
-                        </li>' '
+                    <ul className="navbar-nav gap-2">
+                        <Link to="/catalogo" className="mt-2"><li className="nav-item text-red fw-bold list-unstyled">
+                            Catálogo
+                        </li></Link>
                         <li className="nav-item">
                             <a className="nav-link text-white" href="https://api.whatsapp.com/send?phone=5561996851375&text=Olá, gostaria de saber mais sobre o Vinum!">Whatsapp</a>
                         </li>
