@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPriceFilter, priceFilter }) => {
+export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPriceFilter, priceFilter, priceValues, setPriceValues }) => {
 
     const filterCategory = (e: any) => {
         if (categoryFilter.find((category: any) => category == e.target.id)) {
@@ -15,23 +15,31 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
 
     }
 
-    const filterPrice = (e: any) => {
-        if (priceFilter.find((category: any) => category == e.target.id)) {
-            const remove = [...priceFilter];
+    useEffect(() => {
+        if (priceValues) {
+            if (priceFilter.filter((price: any) => price == priceValues).length > 0) {
+                const remove = [...priceFilter];
 
-            const index = priceFilter.indexOf(e.target.id)
+                const index = priceFilter.indexOf(priceValues);
 
-            remove.splice(index, 1)
+                remove.splice(index, 1)
 
-            setPriceFilter(remove)
-        } else setPriceFilter((priceFilter: any) => [...priceFilter, e.target.id]);
-    }
+                setPriceFilter(remove)
+            } else {
+                if (priceFilter.length == 0) setPriceFilter([priceValues]);
+                else setPriceFilter((priceFilter: any) => [...priceFilter, priceValues]);
+            }
+        }
+
+    }, [priceValues])
+
+
 
     return (
-        <div className="d-flex flex-column gap-3 d-md-none">
-            <div className="d-flex flex-column border gap-3 border-gold rounded p-4 me-5 mh-500 ">
+        <div className="d-flex flex-column gap-3 align-items-center w-100">
+            <div className="d-flex justify-content-center border gap-3 p-2 border-gold rounded w-content  pt-3">
                 <div className="mb-3 border-bottom border-gold">
-                    Filtrar por categoria <i className="fa-solid fa-arrow-down-long"></i>
+                    Filtrar por categoria
                 </div>
                 <div className="mb-3 d-flex">
                     <input className="pointer me-2" onChange={filterCategory} type="checkbox" id="branco" />
@@ -62,25 +70,25 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                 </div>
 
             </div>
-            <div className="d-flex flex-column border gap-3  border-gold rounded p-4 me-5 mh-400">
+            <div className="d-flex justify-content-center border gap-3 p-2  border-gold rounded w-content pt-3">
                 <div className="mb-3 border-bottom border-gold">
-                    Filtrar por preço <i className="fa-solid fa-arrow-down-long"></i>
+                    Filtrar por preço
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="30" />
+                    <input className="pointer me-2" onChange={e => setPriceValues({ min: 30, max: 100 })} type="checkbox" id="30" />
                     <label htmlFor="30" className="me-1 pointer">R$ 30 - 100</label>
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="100" />
+                    <input className="pointer me-2" onChange={e => setPriceValues({ min: 100, max: 300 })} type="checkbox" id="100" />
                     <label htmlFor="100" className="me-1 pointer">R$ 100 - 300</label>
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="300" />
+                    <input className="pointer me-2" onChange={e => setPriceValues({ min: 300, max: 500 })} type="checkbox" id="300" />
                     <label htmlFor="300" className="me-1 pointer">R$ 300 - 500</label>
                 </div>
                 <div className="mb-3 d-flex">
-                    <input className="pointer me-2" onChange={filterPrice} type="checkbox" id="500" />
-                    <label htmlFor="500" className="me-1 pointer">Acima de R$500 </label>
+                    <input className="pointer me-2" onChange={e => setPriceValues({ min: 500, max: 12000 })} type="checkbox" id="500" />
+                    <label htmlFor="500" className="me-1 pointer">Acima de R$ 500 </label>
                 </div>
             </div>
         </div>
