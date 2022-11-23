@@ -32,7 +32,6 @@ export const Wines = () => {
 
     useEffect(() => {
         wines.forEach(wine => {
-            console.log(wine)
             if (priceFilter.filter((price: any) => (parseInt(wine.sale) <= price.max || price.min >= parseInt(wine.sale))).length > 0) {
                 console.log(priceFilter.filter((price: any) => (parseInt(wine.sale) <= price.max || parseInt(wine.sale) >= price.min)), parseInt(wine.sale))
             }
