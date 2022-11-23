@@ -25,13 +25,13 @@ export const Login = () => {
 
         api.post('/user/auth', user)
             .then(result => {
+                console.log(result)
                 if (result.data) {
                     localStorage.setItem('logged', result.data._id)
-                    navigate('/admin')
                 }
+                navigate('/admin')
             })
             .catch(e => console.log(e))
-
     }
 
     return (
