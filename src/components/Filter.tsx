@@ -14,6 +14,7 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
         } else setCategoryFilter((categoryFilter: any) => [...categoryFilter, e.target.id]);
 
     }
+
     const filterPrice = (e: any) => {
         if (priceFilter.find((category: any) => category == e.target.id)) {
             const remove = [...priceFilter];
@@ -27,7 +28,7 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
     }
 
     return (
-        <div className="d-flex flex-column gap-3 d-md-flex ">
+        <div className="d-flex flex-column gap-3 d-md-none">
             <div className="d-flex flex-column border gap-3 border-gold rounded p-4 me-5 mh-500 ">
                 <div className="mb-3 border-bottom border-gold">
                     Filtrar por categoria <i className="fa-solid fa-arrow-down-long"></i>

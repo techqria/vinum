@@ -14,20 +14,12 @@ export default function Sidebar({ scroll, color }) {
         }
     }, [scroll])
 
-    function showSidebar() {
-        if (this.sidebar) {
-            this.sidebar = false;
-        } else {
-            this.sidebar = true;
-        }
-    }
-
     return (
         <>
 
         <nav nav className="zIndex position-fixed">
 
-            <button onClick={() => showSidebar(true)} className="btn btn-default button-sidebar d-md-none position-fixed mt-3 ms-3" tabindex="0"><i className="text-red fa-solid fa-2x fa-bars"></i></button>
+            <button className="btn btn-default button-sidebar d-md-none position-fixed mt-3 ms-3" tabindex="0"><i className="text-red fa-solid fa-2x fa-bars"></i></button>
 
             <div id="sidebar" className="sidebar d-flex justify-content-md-around justify-content-center flex-column flex-md-row">
                 <Link to="/" tabindex="0"><img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></Link>

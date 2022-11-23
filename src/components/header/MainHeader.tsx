@@ -9,7 +9,7 @@ export const MainHeader: React.FC<any> = ({scroll, older}) => {
         <> 
             {
                  older && 
-                <Sidebar scroll={scroll} color={''}/>
+                <SidebarMobile scroll={scroll} color={''}/>
             }
             <Header />
         </>
