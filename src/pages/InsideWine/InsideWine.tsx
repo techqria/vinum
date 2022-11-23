@@ -3,6 +3,7 @@ import { Wine } from "./Wine"
 import Footer from "../../components/Footer";
 import { useParams } from "react-router-dom";
 import Sidebar from "../../components/sidebar/Sidebar";
+import SidebarMobile from "../../components/sidebar/SidebarMobile";
 
 export const Inside = () => {
 
@@ -26,7 +27,7 @@ export const Inside = () => {
     let { id } = useParams()
     return (
         <>
-            <Sidebar scroll={scroll} color={'black'}/>
+            <SidebarMobile scroll={scroll} color={'black'}/>
             <Wine wineId={id} />
             <Footer />
         </>
