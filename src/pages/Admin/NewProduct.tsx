@@ -10,8 +10,8 @@ export const NewProduct = () => {
 
     const [newWine, setNewWine] = useState<WineDto>(
         {
-            name: '', price: '', sale: '', category: '', country: '',  vol: '',
-           alcohol: '', year: '', description: '', image: '',
+            name: '', price: '', sale: '', category: '', country: '', vol: '', grapes: '',
+            alcohol: '', year: '', description: '', image: '',
         }
     )
 
@@ -35,7 +35,7 @@ export const NewProduct = () => {
 
         newWine.image = urlImage
 
-        if(!newWine.sale) newWine.sale = newWine.price
+        if (!newWine.sale) newWine.sale = newWine.price
 
         api.post('/wine/createwine', newWine)
             .then(response => navigate('/admin'))
@@ -55,7 +55,7 @@ export const NewProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Nome</label>
-                                <input  maxLength={35} id="name" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <input maxLength={35} id="name" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -80,11 +80,11 @@ export const NewProduct = () => {
                                 <input id="alcohol" placeholder="12,5%" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
-                        
+
                     </div>
 
                     <div className="row">
-                        
+
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Tipo</label>
@@ -107,7 +107,7 @@ export const NewProduct = () => {
                         </div>
                     </div>
                     <div className="row">
-                        
+
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Volume</label>
@@ -122,14 +122,24 @@ export const NewProduct = () => {
                         </div>
                     </div>
                     <div className="row">
-                        
-                        
+
+
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Selecionar Imagem</label>
                                 <input id="image" onChange={handleImage} type="file" className="form-control bg-dark text-white" />
                             </div>
                         </div>
+                        <div className="col-md-6">
+                            <div className="mb-3">
+                                <label htmlFor="" className="form-label text-white">Uva(s)</label>
+                                <input id="grapes" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Descrição</label>

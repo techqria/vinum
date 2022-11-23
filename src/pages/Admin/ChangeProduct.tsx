@@ -10,7 +10,7 @@ export const ChangeProduct = () => {
     const [wines, setWines] = useState<WineDto[]>([]);
 
     const [currentWine, setCurrentWine] = useState<WineDto>({
-        _id: '', name: '', price: '', sale: '', category: '', country: '', vol: '',
+        _id: '', name: '', price: '', sale: '', category: '', country: '', vol: '', grapes: '',
         alcohol: '', year: '', description: '', image: '',
     })
 
@@ -122,7 +122,7 @@ export const ChangeProduct = () => {
                         </div>
                     </div>
                     <div className="row">
-                        
+
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Teor Alcólico</label>
@@ -131,20 +131,27 @@ export const ChangeProduct = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="mb-3">
+                                <label htmlFor="" className="form-label text-white">Uva(s)</label>
+                                <input id="grapes" required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Selecionar Imagem</label>
                                 <input id="image" onChange={e => setWine(e)} type="file" className="form-control bg-dark text-white" />
                             </div>
                         </div>
-                    </div>
-
-                    <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Descrição</label>
                                 <textarea id="description" value={currentWine?.description} required onChange={e => setWine(e)} className="form-control bg-dark text-white" ></textarea>
                             </div>
                         </div>
-                        
+
                     </div>
 
                     <div className="mt-4 mb-3 d-flex justify-content-center">
