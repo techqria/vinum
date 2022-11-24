@@ -31,6 +31,21 @@ export const Cards: React.FC<any> = ({ older }) => {
                         <img className="img-fluid rounded" src="https://vinum-wine.s3.amazonaws.com/Cards/card-atual-roses.svg" alt="fundo-card" />
                     </button>
                 </div>
+                <div className="col-md-4 mt-4 d-flex justify-content-center">
+                    <button className="btn btn-default p-0" onClick={e => redirectTo('rose')}>
+                        <img className="img-fluid rounded" src="https://vinum-wine.s3.amazonaws.com/Cards/card-atual-destilados.svg" alt="fundo-card" />
+                    </button>
+                </div>
+                <div className="col-md-4 mt-4 d-flex justify-content-center">
+                    <button className="btn btn-default p-0" onClick={e => redirectTo('rose')}>
+                        <img className="img-fluid rounded" src="https://vinum-wine.s3.amazonaws.com/Cards/card-atual-fortificados.svg" alt="fundo-card" />
+                    </button>
+                </div>
+                <div className="col-md-4 mt-4 d-flex justify-content-center">
+                    <button className="btn btn-default p-0" onClick={e => redirectTo('rose')}>
+                        <img className="img-fluid rounded" src="https://vinum-wine.s3.amazonaws.com/Cards/card-atual-champagnes.svg" alt="fundo-card" />
+                    </button>
+                </div>
             </div>
         </section>
     );
