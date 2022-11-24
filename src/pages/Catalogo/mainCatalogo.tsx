@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Wines } from "./Wines"
 import Footer from "../../components/Footer";
-import Sidebar from "../../components/sidebar/Sidebar";
 import SidebarMobile from "../../components/sidebar/SidebarMobile";
 
 import {Slider} from "./Slider";

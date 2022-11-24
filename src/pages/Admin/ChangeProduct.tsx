@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import api from "../../api/api";
 import { WineDto } from "../../dto/wine.dto";
+import { UploadImageToS3 } from "../../utils/functionS3";
 
 export const ChangeProduct = () => {
 
@@ -13,6 +14,8 @@ export const ChangeProduct = () => {
         _id: '', name: '', price: '', sale: '', category: '', country: '', vol: '', grapes: '',
         alcohol: '', year: '', description: '', image: '',
     })
+
+    const [selectedFile, setSelectedFile] = useState<File>();
 
     useEffect(() => {
         api.get('/wine/listAll')
@@ -38,14 +41,20 @@ export const ChangeProduct = () => {
         if (e.target.id == 'id') getCurrentWine(e.target.value)
     }
 
-    function editWine(e: any) {
+    async function editWine(e: any) {
         e.preventDefault();
+
+        const urlImage = await UploadImageToS3(selectedFile)
+
+        currentWine.image = urlImage
 
         api.put(`/wine/update-wine/${currentWine._id}`, currentWine)
             .then(response => navigate('/admin'))
             .catch(e => console.error(e))
-
     }
+
+    const handleImage = (e: any) => setSelectedFile(e.target.files[0]);
+
 
     return (
         <section className="pt-5 pb-5 bg-dark">
@@ -126,7 +135,7 @@ export const ChangeProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Teor Alcólico</label>
-                                <input id="alcohol" value={currentWine?.alcohol} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <input id="alcohol" value={currentWine?.alcohol} required onChange={e => setWine(e)} type="number" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -142,7 +151,7 @@ export const ChangeProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Selecionar Imagem</label>
-                                <input id="image" onChange={e => setWine(e)} type="file" className="form-control bg-dark text-white" />
+                                <input id="image" onChange={handleImage} type="file" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">

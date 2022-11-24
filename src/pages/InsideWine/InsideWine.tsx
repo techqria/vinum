@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Wine } from "./Wine"
 import Footer from "../../components/Footer";
 import { useParams } from "react-router-dom";
-import Sidebar from "../../components/sidebar/Sidebar";
 import SidebarMobile from "../../components/sidebar/SidebarMobile";
 
 export const Inside = () => {

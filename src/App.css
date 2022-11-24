@@ -115,12 +115,6 @@ button {
   z-index: 2 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -290,9 +284,9 @@ body {
 .filter {
   position: relative;
   display: inline-block;
- }
- 
- .filter__button {
+}
+
+.filter__button {
   border-radius: 0.125rem;
   padding: 0.5rem 1rem;
   background-color: #2b7de9;
@@ -303,26 +297,65 @@ body {
   color: white;
   font-size: 16px;
   line-height: 1.5;
- }
- 
- .filter__button:hover {
+}
+
+.filter__button:hover {
   background-color: #176dde;
- }
- .filter__button:focus {
+}
+
+.filter__button:focus {
   outline: 1px dotted;
   outline: 1px auto -webkit-focus-ring-color;
- }
+}
 
- .navbar-toggler{
+.navbar-toggler {
   color: #373a47;
   background-color: #A71830;
- }
- .zIndex {
+}
+
+.zIndex {
   z-index: 10 !important;
 }
-.navbar-brand{
+
+.navbar-brand {
   padding-right: 2rem;
 }
+
 .navbar {
   margin-top: 0;
+}
+
+
+input[type="text"]#subdomaintwo {
+  -webkit-appearance: none !important;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  width: 75px;
+  border: 1px solid gray;
+  border-left: 0px;
+  margin: 0 0 0 -7px;
+  background: white;
+}
+
+input[type="text"]#subdomain {
+  -webkit-appearance: none !important;
+  border: 1px solid gray;
+  border-right: 0px;
+  outline: none;
+}
+
+.mw-120 {
+  max-width: 120px;
+}
+
+.mh-150 {
+  max-height: 150px;
+}
+
+@media screen and (max-width: 767px) {
+
+  #sidebar {
+    background-color: black !important;
+  }
+
 }

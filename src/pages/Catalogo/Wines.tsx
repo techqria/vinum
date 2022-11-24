@@ -49,12 +49,12 @@ export const Wines = () => {
                     wines.map((wine, index) => {
                         if (
                             (categoryFilter.find(category => category == wine.category)) ||
-                            (priceFilter.filter((price: any) => (parseInt(wine.sale) <= price.max || price.min >= parseInt(wine.sale))).length > 0) ||
+                            (priceFilter.filter((price: any) => (parseInt(wine.sale) <= price.max && parseInt(wine.sale) >= price.min  )).length > 0) ||
                             (categoryFilter.length == 0 && priceFilter.length == 0)) {
                             return (
                                 <div key={index} className="col-md-3 d-flex flex-column align-items-center justify-content-center">
                                     <a href={`/inside/${wine._id}`} className="d-flex flex-column align-items-center">
-                                        <img width={150} src={wine.image} alt="garrafaVinho.svg" />
+                                        <img className="mw-120 mh-150" src={wine.image} alt="garrafaVinho.svg" />
                                         <p>{wine.name}</p>
                                         {
                                             wine.price != wine.sale ?

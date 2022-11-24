@@ -6,15 +6,15 @@ export default function SidebarMobile({ scroll, color }) {
 
     useEffect(() => {
         if (scroll) {
-            document.getElementById('navbar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
         } else {
-            color ? document.getElementById('navbar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)' : document.getElementById('navbar').style.backgroundColor = "transparent";
+            color ? document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)' : document.getElementById('sidebar').style.backgroundColor = "transparent";
         }
     }, [scroll])
 
     return (
 
-        <nav id="navbar" className="zIndex navbar navbar-expand-lg bg-black position-fixed w-100 m-0 p-0">
+        <nav id="sidebar" className="zIndex navbar navbar-expand-lg position-fixed w-100 m-0 p-0">
             <div className="container-fluid d-flex justify-content-around pb-3 gap-3">
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

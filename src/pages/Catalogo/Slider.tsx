@@ -42,7 +42,7 @@ export const Slider = () => {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
- freeMode={true}
+                freeMode={true}
                 grabCursor={true}
                 modules={[Navigation]}
                 className="mySwiper"
@@ -72,7 +72,9 @@ export const Slider = () => {
                         if (wine.sale != wine.price) {
                             return (
                                 <SwiperSlide key={index} className="d-flex flex-column justify-content-center align-items-center">
-                                    <a href={`/inside/${wine._id}`}><img width={150} src={wine.image} alt="garrafaVinho.svg" /></a>
+                                    <a href={`/inside/${wine._id}`}>
+                                        <img className="mw-120 mh-150" src={wine.image} alt="garrafaVinho.svg" />
+                                    </a>
                                     <p>{wine.name}</p>
                                     <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
                                     <p>Por R$ {(wine.sale)}</p>
