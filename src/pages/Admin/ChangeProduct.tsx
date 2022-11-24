@@ -142,7 +142,7 @@ export const ChangeProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Selecionar Imagem</label>
-                                <input id="image" value={currentWine?.image} onChange={e => setWine(e)} type="file" className="form-control bg-dark text-white" />
+                                <input id="image" onChange={e => setWine(e)} type="file" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
