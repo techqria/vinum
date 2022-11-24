@@ -27,9 +27,9 @@ export const Login = () => {
             .then(result => {
                 if (result.data) {
                     localStorage.setItem('logged', result.data._id)
-                    navigate('/admin')
-                    window.location.reload()
                 }
+                navigate('/admin')
+                window.location.reload()
             })
             .catch(e => console.log(e))
     }
