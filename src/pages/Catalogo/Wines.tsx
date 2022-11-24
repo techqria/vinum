@@ -41,7 +41,7 @@ export const Wines = () => {
     return (
         <section className="container">
             <div className="row d-flex gap-5 justify-content-center">
-                <h1 id="headerCatalogo" className="position-relative pb-3 text-center text-red">Catálogo Completo</h1>
+            <h1 id="headerMenu" className="pb-2 text-center position-relative mb-4">NOSSO CATÁLOGO</h1>
 
                 <Filter priceValues={priceValues} setPriceValues={setPriceValues} setCategoryFilter={setCategoryFilter} categoryFilter={categoryFilter} priceFilter={priceFilter} setPriceFilter={setPriceFilter} />
 
@@ -60,7 +60,7 @@ export const Wines = () => {
                                             wine.price != wine.sale ?
                                                 <div className="d-flex flex-column">
                                                     <h4 className='text-decoration-line-through'>De R$ {wine.price}</h4>
-                                                    <p>Por R$ {(wine.sale)}</p>
+                                                    <p className="text-center">Por R$ {(wine.sale)}</p>
                                                 </div>
                                                 :
                                                 <h4 className=''>R$ {wine.price}</h4>

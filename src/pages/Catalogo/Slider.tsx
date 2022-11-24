@@ -33,9 +33,9 @@ export const Slider = () => {
     SwiperCore.use([Autoplay]);
 
     return (
-        <div className="py-5 px-5">
-            <h2 className="ofertas text-center text-red pb-3">Melhores Ofertas</h2>
-            <p className="text-center p-1">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
+        <div className="pt-2">
+            <h2 className="ofertas text-center text-red">Melhores Ofertas</h2>
+            <p className="text-center pb-3">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
             <Swiper
                 navigation={true}
                 autoplay={{

@@ -35,9 +35,9 @@ export const Slider: React.FC<any> = ({ older }) => {
     SwiperCore.use([Autoplay]);
 
     return (
-        <div className="py-5 px-5" style={{ pointerEvents: older ? 'auto' : 'none' }}>
-            <h2 className="mt-5 text-center text-red pb-3">Melhores Ofertas</h2>
-            <p className="text-center p-1 fst-italic">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
+        <div className="mt-5" style={{ pointerEvents: older ? 'auto' : 'none' }}>
+            <h2 className="text-center text-red">Melhores Ofertas</h2>
+            <p className="text-center pb-4 fst-italic">Deslize com o mouse pelo carrossel para aproveitar todas as promoções</p>
             <Swiper
                 navigation={true}
                 autoplay={{
