@@ -10,7 +10,7 @@ export const Menu: React.FC<any> = ({older}) => {
                 atender todos os tipos de gostos e ocasiões! Mais do que boas opções e preços justos,
                 queremos estar presentes nos momentos mais especiais da sua vida!</p>
             <div className="card-group d-flex gap-3">
-                <div className="card bg-dark text-white">
+                <div className="card bg-dark text-white d-md-flex d-none">
                     <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo.jpg" className="card-img" alt="..." /></Link>
                 </div>
                 <div className="card bg-dark text-white">
