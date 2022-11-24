@@ -20,7 +20,7 @@ export default function SidebarMobile({ scroll, color }) {
                     <img width={30} src="https://vinum-wine.s3.amazonaws.com/Menu+Rounded.png" />
                 </button>
 
-                <a className="navbar-brand navbar-brand p-0 w-50 d-flex justify-content-center m-0" href="/"><img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></a>
+                <a className="navbar-brand navbar-brand p-0 w-50 d-flex justify-content-center m-0" href="/"><img id="img-navbar" className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></a>
 
                 <div className="collapse navbar-collapse mt-md-0 mt-3 pt-2" id="navbarNav">
                     <ul className="navbar-nav d-flex flex-row align-items-center justify-content-center gap-3">
