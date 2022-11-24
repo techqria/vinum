@@ -9,7 +9,7 @@ export default function Header() {
                 </div>
             </section>
             <div className="bg-gold ">
-                <div className="container d-flex justify-content-center align-items-center gap-3 pt-3 pb-3">
+                <div className="ms-md-0 ms-3 container d-flex justify-content-center align-items-center gap-3 pt-3 pb-3">
                     <div className="d-flex justify-content-center align-items-center">
                         <i className="fa-solid fa-truck me-2"></i>
                         <p className="p-0 m-0 ">Entrega <span className="fw-bold">GRÁTIS</span></p>
