@@ -118,8 +118,9 @@ export const ChangeProduct = () => {
                                     <option value="branco">Branco</option>
                                     <option value="rose">Rose</option>
                                     <option value="tinto">Tinto</option>
-                                    <option value="espumante">Espumante</option>
-                                    <option value="champagne">Champagne</option>
+                                    <option value="destilados">Destilados</option>
+                                    <option value="champagne">Champagnes & Espumantes</option>
+                                    <option value="fortificados">Fortificados</option>
                                 </select>
                             </div>
                         </div>

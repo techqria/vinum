@@ -58,23 +58,20 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                 </div>
                 <div className="d-flex justify-content-center">
                     <div className="mb-3 d-flex">
-                        <input className="pointer me-2" onChange={filterCategory} type="checkbox" id="espumante" />
-                        <label htmlFor="espumante" className="me-1 pointer">Espumantes</label>
-                    </div>
-                    <div className="mb-3 d-flex">
-                        <input className="pointer me-2" onChange={filterCategory} type="checkbox" id="destilados" />
-
+                        <input checked={categoryFilter == 'destilados' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="destilados" />
                         <label htmlFor="destilados" className="me-1 pointer">Destilados</label>
                     </div>
                 </div>
-
                 <div className="mb-3 d-flex justify-content-center">
-                    <input className="pointer me-2" onChange={filterCategory} type="checkbox" id="champagne" />
-
-                    <label htmlFor="champagne" className="me-1 pointer">Champagnes</label>
+                    <input checked={categoryFilter == 'champagne' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="champagne" />
+                    <label htmlFor="champagne" className="me-1 pointer">Champagnes & Espumantes</label>
                 </div>
-
+                <div className="mb-3 d-flex justify-content-center">
+                    <input checked={categoryFilter == 'fortificados' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="fortificados" />
+                    <label htmlFor="fortificados" className="me-1 pointer">Fortificados</label>
+                </div>
             </div>
+
             <div className="d-flex flex-md-row flex-column justify-content-center border gap-3 p-2  border-gold rounded w-content pt-3">
 
                 <div className="mb-3 border-bottom border-gold text-center">

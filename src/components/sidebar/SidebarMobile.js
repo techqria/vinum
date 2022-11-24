@@ -16,11 +16,11 @@ export default function SidebarMobile({ scroll, color }) {
 
         <nav id="sidebar" className="zIndex navbar navbar-expand-lg position-fixed w-100 m-0 p-0">
             <div className="container-fluid d-flex justify-content-around pb-3 gap-3">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <a className="navbar-brand navbar-brand p-0 w-50 d-flex justify-content-center m-0" href="/"><img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></a>
+                <a className="navbar-brand navbar-brand p-0 w-50 d-flex justify-content-center m-0" href="/"><img id="img-navbar" className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></a>
 
                 <div className="collapse navbar-collapse mt-md-0 mt-3" id="navbarNav">
                     <ul className="navbar-nav d-flex flex-row align-items-center justify-content-center gap-3">
