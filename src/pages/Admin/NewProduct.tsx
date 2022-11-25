@@ -71,7 +71,7 @@ export const NewProduct = () => {
 
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Preço com Desconto</label>
-                                <input id="sale" defaultValue={sale} required onChange={e => setWine(e)} type="number" className="form-control bg-dark text-white" />
+                                <input id="sale" defaultValue={sale} required onChange={e => setWine(e)} type="string" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
