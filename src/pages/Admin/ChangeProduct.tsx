@@ -43,9 +43,14 @@ export const ChangeProduct = () => {
 
     async function editWine(e: any) {
         e.preventDefault();
-
-        const urlImage = await UploadImageToS3(selectedFile)
-
+        console.log(selectedFile)
+        console.log(currentWine.image)
+        let urlImage;
+        if (selectedFile){
+        urlImage = await UploadImageToS3(selectedFile)
+        } else{
+            urlImage = currentWine.image
+        }
         currentWine.image = urlImage
 
         api.put(`/wine/update-wine/${currentWine._id}`, currentWine)
