@@ -7,12 +7,14 @@ export default function Footer() {
         >
             <section className="container pt-4 pb-4">
                 <div className="row w-100 d-flex justify-content-center align-items-start">
-                    <div className="col-md-4 d-flex mb-md-0 mb-5 justify-content-center align-items-center flex-column">
-                        <img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" />
+
+                    <div className="col-md-4 d-flex mb-md-0 mb-5 justify-content-center d-flex align-items-center">
+                        <img className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logo-Vinum+Wine.svg" alt="logo.svg" />
+                        <p style={{fontSize: '24px'}}>Vinum <br className="d-md-none"/> Eventos</p>
                     </div>
 
                     <div className="col-md-4 d-flex mb-md-0 mb-4 justify-content-center align-items-center flex-column">
-                        <h6 className="text-uppercase text-red fw-bold">Vinum Wine Eventos</h6>
+                        <h6 className="text-uppercase text-red fw-bold">Vinum Eventos</h6>
                         <div className="d-flex justify-content-start flex-column mt-2">
                             <p className="mb-2">
                                 <i className="fas fa-home me-2"></i><span className="text-white">SQNW 309 Bloco B - Brasília/DF</span>
