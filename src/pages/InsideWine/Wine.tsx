@@ -19,7 +19,7 @@ export const Wine = ({ wineId }: any) => {
     return (
         <section className="container text-center">
             <div className="row">
-                <h2 className='marginInside position-relative'>{wine.name}</h2>
+                <h2 className='marginInside position-relative pt-md-0 pt-5'>{wine.name}</h2>
                 <div className="col-md-6">
                     <div className="d-flex align-items-center justify-content-center">
                         <img width={250} className="scale" src={wine.image} alt="garrafaVinho.svg" />
