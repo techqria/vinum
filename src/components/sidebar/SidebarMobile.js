@@ -20,12 +20,14 @@ export default function SidebarMobile({ scroll, color }) {
                     <img width={30} src="https://vinum-wine.s3.amazonaws.com/Menu+Rounded.png" />
                 </button>
 
-                <a className="navbar-brand navbar-brand p-0 w-50 d-flex justify-content-center m-0" href="/"><img id="img-navbar" className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" /></a>
+                <a className="navbar-brand navbar-brand w-50 d-flex justify-content-center text-white" href="/"><img id="img-navbar" className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logo-Vinum+Wine.svg" alt="logo.svg" />
+                <h2 className="ms-3" style={{fontSize: '42px', marginTop: "2rem"}}>Vinum <br className="d-md-none"/>Eventos</h2>
+                </a>
 
                 <div className="collapse navbar-collapse mt-md-0 mt-3 pt-2" id="navbarNav">
                     <ul className="navbar-nav d-flex flex-row align-items-center justify-content-center gap-3">
                         <li className="nav-item" >
-                            <Link className="nav-link text-red scale" to="/catalogo">
+                            <Link className="nav-link text-red scale fw-bold" to="/catalogo">
                                 Catálogo
                             </Link>
                         </li>

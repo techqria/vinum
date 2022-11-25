@@ -8,9 +8,10 @@ export default function Header() {
                     <p className="fs-1 mt-5 pt-5 pb-5 text-center fw-light fst-italic">Pensando em <b>você</b>, oferecemos os melhores vinhos com os menores preços.</p>
                 </div>
             </section>
-            <div className="bg-gold ">
+
+            <div className="bg-gold d-flex justify-content-center">
                 <div className="ms-md-0 ms-3 container d-flex justify-content-center align-items-center gap-3 pt-3 pb-3">
-                    <div className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex justify-content-center align-items-center text-center">
                         <i className="fa-solid fa-truck me-2"></i>
                         <p className="p-0 m-0 ">Entrega <span className="fw-bold">GRÁTIS</span></p>
                     </div>
