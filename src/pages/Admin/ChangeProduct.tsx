@@ -136,7 +136,7 @@ export const ChangeProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Teor Alcólico</label>
-                                <input id="alcohol" value={currentWine?.alcohol} required onChange={e => setWine(e)} type="number" className="form-control bg-dark text-white" />
+                                <input id="alcohol" value={currentWine?.alcohol} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
