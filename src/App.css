@@ -321,24 +321,6 @@ body {
 }
 
 
-input[type="text"]#subdomaintwo {
-  -webkit-appearance: none !important;
-  color: rgb(255, 255, 255);
-  text-align: left;
-  width: 75px;
-  border: 1px solid gray;
-  border-left: 0px;
-  margin: 0 0 0 -7px;
-  background: white;
-}
-
-input[type="text"]#subdomain {
-  -webkit-appearance: none !important;
-  border: 1px solid gray;
-  border-right: 0px;
-  outline: none;
-}
-
 .mw-120 {
   max-width: 120px;
 }
