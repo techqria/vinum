@@ -1,8 +1,22 @@
 import React, { useState, useEffect } from "react";
-
+import { WineDto } from "../../dto/wine.dto";
 import { Link } from 'react-router-dom';
+import api from "../../api/api";
 
 export default function SidebarMobile({ scroll, color }) {
+
+    const [wines, setWines] = useState([]);
+    const [wineFound, setWineFound] = useState({ name: '', id: '' });
+
+    useEffect(() => {
+        api.get("/wine/listAll")
+            .then((response) => {
+                response.data.forEach(wine => {
+                    setWines(wines => [...wines, wine])
+                })
+            })
+            .catch(err => console.error("ops! ocorreu um erro" + err));
+    }, []);
 
     useEffect(() => {
         if (scroll) {
@@ -11,6 +25,22 @@ export default function SidebarMobile({ scroll, color }) {
             color ? document.getElementById('sidebar').style.backgroundColor = 'rgba(0, 0, 0, 0.9)' : document.getElementById('sidebar').style.backgroundColor = "transparent";
         }
     }, [scroll])
+
+    const searchWine = (e) => {
+        const value = e.target.value.toLowerCase();
+
+        wines.forEach(wine => {
+
+            let name = wine.name.toLowerCase();
+
+            if (name.includes(value)) {
+                setWineFound({ name: wine.name, id: wine._id });
+            }
+
+        });
+
+        if (value == '') setWineFound({ name: '', id: '' });
+    }
 
     return (
 
@@ -21,7 +51,7 @@ export default function SidebarMobile({ scroll, color }) {
                 </button>
 
                 <a className="navbar-brand navbar-brand w-50 d-flex justify-content-center text-white" href="/"><img id="img-navbar" className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logo-Vinum+Wine.svg" alt="logo.svg" />
-                <h2 className="ms-3" style={{fontSize: '42px', marginTop: "2rem"}}>Vinum <br className="d-md-none"/>Eventos</h2>
+                    <h2 className="ms-3" style={{ fontSize: '42px', marginTop: "2rem" }}>Vinum <br className="d-md-none" />Eventos</h2>
                 </a>
 
                 <div className="collapse navbar-collapse mt-md-0 mt-3 pt-2" id="navbarNav">
@@ -36,6 +66,10 @@ export default function SidebarMobile({ scroll, color }) {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-white" target="_blank" href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y=">Instagram</a>
+                        </li>
+                        <li className="nav-item">
+                            <input placeholder="Buscar por vinho" className="form-control bg-transparent text-white" type="search" name="search" onChange={searchWine} />
+                            <a className={wineFound.name.length > 0 ? 'd-block text-white mt-2 bg-opacity ps-2 pe-2 pt-1 pb-1' : 'd-none'} href={`/inside/${wineFound?.id}`}>{wineFound?.name}</a>
                         </li>
                     </ul>
                 </div>
