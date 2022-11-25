@@ -41,9 +41,7 @@ export const Login = () => {
 
     return (
         <section className="container pt-5 pb-5">
-            <div className="mb-3 position-relative bg-black w-100">
-                <img className="img-fluid position-absolute" src="https://vinum-wine.s3.amazonaws.com/logoVinum.svg" alt="logo.svg" />
-            </div>
+
             <form action="">
                 <div className="mb-3">
                     <label htmlFor="" className="form-label">Usuário</label>
