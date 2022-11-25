@@ -50,8 +50,8 @@ export default function SidebarMobile({ scroll, color }) {
                     <img width={30} src="https://vinum-wine.s3.amazonaws.com/Menu+Rounded.png" />
                 </button>
 
-                <a className="navbar-brand navbar-brand w-50 d-flex justify-content-center text-white" href="/"><img id="img-navbar" className="img-fluid" src="https://vinum-wine.s3.amazonaws.com/logo-Vinum+Wine.svg" alt="logo.svg" />
-                    <h2 className="ms-3" style={{ fontSize: '42px', marginTop: "2rem" }}>Vinum <br className="d-md-none" />Eventos</h2>
+                <a className="navbar-brand navbar-brand w-50 d-flex justify-content-center text-white m-0" href="/"><img id="img-navbar" className="img-fluid" style={{maxHeight: '90px'}} src="https://vinum-wine.s3.amazonaws.com/logo-Vinum+Wine.svg" alt="logo.svg" />
+                <h2 className="ms-3" style={{fontSize: '36px', marginTop: "1.5rem"}}>Vinum <br className="d-md-none"/>Eventos</h2>
                 </a>
 
                 <div className="collapse navbar-collapse mt-md-0 mt-3 pt-2" id="navbarNav">
