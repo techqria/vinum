@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
 
-export const Menu: React.FC<any> = ({older}) => {
+export const Menu: React.FC<any> = ({ older }) => {
 
     return (
         <section className="container mt-1 mb-5 pb-5" style={{ pointerEvents: older ? 'auto' : 'none' }}>
             <h1 id="headerMenu" className="pb-2 text-center position-relative mb-4">NOSSO CATÁLOGO</h1>
             <p className="text-center mb-5">
-                A Vinum Wine Eventos oferece excelentes rótulos de vinhos, espumantes e destilados para
-                atender todos os tipos de gostos e ocasiões! Mais do que boas opções e preços justos,
-                queremos estar presentes nos momentos mais especiais da sua vida!</p>
+                A Vinum Wine Eventos oferece excelentes rótulos de vinhos, espumantes e destilados para atender todos os paladares e ocasiões!
+                Mais do que boas opções e preços justos, queremos estar presentes nos momentos mais especiais da sua vida!</p>
             <div className="card-group d-flex gap-3">
                 <div className="card bg-dark text-white d-md-flex d-none">
                     <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo.jpg" className="card-img" alt="..." /></Link>
