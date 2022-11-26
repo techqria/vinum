@@ -49,7 +49,7 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                     </div>
                     <div className="mb-3 d-flex">
                         <input checked={categoryFilter == 'rose' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="rose" />
-                        <label htmlFor="rose" className="me-1 pointer">Roses</label>
+                        <label htmlFor="rose" className="me-1 pointer">Rosés</label>
                     </div>
                     <div className="mb-3 d-flex">
                         <input checked={categoryFilter == 'tinto' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="tinto" />
@@ -59,12 +59,12 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                 <div className="d-flex justify-content-center">
                     <div className="mb-3 d-flex">
                         <input checked={categoryFilter == 'destilado' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="destilado" />
-                        <label htmlFor="destilados" className="me-1 pointer">Destilados</label>
+                        <label htmlFor="destilado" className="me-1 pointer">Destilados</label>
                     </div>
                 </div>
                 <div className="mb-3 d-flex justify-content-center">
-                    <input checked={categoryFilter == 'champagne' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="champagne" />
-                    <label htmlFor="champagne" className="me-1 pointer">Champagnes & Espumantes</label>
+                    <input checked={categoryFilter == 'champagnes & espumantes' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="champagnes & espumantes" />
+                    <label htmlFor="champagnes & espumantes" className="me-1 pointer">Champagnes & Espumantes</label>
                 </div>
                 <div className="mb-3 d-flex justify-content-center">
                     <input checked={categoryFilter == 'fortificado' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="fortificado" />

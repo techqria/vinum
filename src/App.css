@@ -346,3 +346,11 @@ body {
   }
 
 }
+
+.mw-240 {
+  max-width: 240px;
+}
+
+.mh-300 {
+  max-height: 300px;
+}

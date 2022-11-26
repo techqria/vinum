@@ -42,7 +42,7 @@ export const Cards: React.FC<any> = ({ older }) => {
                     </button>
                 </div>
                 <div className="col-md-4 mt-4 d-flex justify-content-center">
-                    <button className="btn btn-default p-0" onClick={e => redirectTo('champagne')}>
+                    <button className="btn btn-default p-0" onClick={e => redirectTo('champagnes & espumantes')}>
                         <img className="img-fluid rounded" src="https://vinum-wine.s3.amazonaws.com/Cards/card-atual-champagnes.svg" alt="fundo-card" />
                     </button>
                 </div>

@@ -93,9 +93,9 @@ export const NewProduct = () => {
                                     <option value="branco">Branco</option>
                                     <option value="rose">Rose</option>
                                     <option value="tinto">Tinto</option>
-                                    <option value="destilados">Destilados</option>
-                                    <option value="champagne">Champagnes & Espumantes</option>
-                                    <option value="fortificados">Fortificados</option>
+                                    <option value="destilado">Destilados</option>
+                                    <option value="champagnes & espumantes">Champagnes & Espumantes</option>
+                                    <option value="fortificado">Fortificados</option>
                                 </select>
                             </div>
                         </div>
