@@ -96,6 +96,8 @@ export const NewProduct = () => {
                                     <option value="destilado">Destilados</option>
                                     <option value="champagnes & espumantes">Champagnes & Espumantes</option>
                                     <option value="fortificado">Fortificados</option>
+                                    <option value="organicos e veganos">Orgânicos e Veganos</option>
+
                                 </select>
                             </div>
                         </div>

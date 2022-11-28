@@ -8,13 +8,19 @@ export const RemoveProduct = () => {
 
     const navigate = useNavigate();
 
+    const [orderedByName, setOrderedByName] = useState<WineDto[]>([]);
+
+
     const [wines, setWines] = useState<WineDto[]>([]);
     const [wineId, setWineId] = useState('');
 
     useEffect(() => {
         api.get('/wine/listAll')
-            .then(response => setWines(response.data))
-            .catch(e => console.log(e))
+            .then(response => {
+                console.log(response.data)
+                setOrderedByName(response.data.sort(((a: any, b: any) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))));
+            })
+            .catch(e => console.error(e))
     }, [])
 
     async function removeProduct(e: any) {
@@ -41,7 +47,7 @@ export const RemoveProduct = () => {
                         <select id="id" onChange={e => setWineId(e.target.value)} className="form-control bg-dark text-white">
                             <option key="default" value="default">Selecionar Vinho</option>
                             {
-                                wines.map(wine => (
+                                orderedByName.map(wine => (
                                     <option key={wine._id} value={wine._id}>{wine.name}</option>
                                 ))
                             }

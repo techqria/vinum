@@ -70,6 +70,10 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                     <input checked={categoryFilter == 'fortificado' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="fortificado" />
                     <label htmlFor="fortificados" className="me-1 pointer">Fortificados</label>
                 </div>
+                <div className="mb-3 d-flex justify-content-center">
+                    <input checked={categoryFilter == 'organicos e veganos' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="organicos e veganos" />
+                    <label htmlFor="organicos e veganos" className="me-1 pointer">Orgânicos e Veganos</label>
+                </div>
             </div>
 
             <div className="d-flex flex-md-row flex-column justify-content-center border gap-3 p-2  border-gold rounded w-content pt-3">
@@ -80,7 +84,7 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                 <div className="d-flex justify-content-center">
                     <div className="mb-3 d-flex">
                         <input className="pointer me-2" onChange={e => setPriceValues({ min: 30, max: 100 })} type="checkbox" id="30" />
-                        <label htmlFor="30" className="me-1 pointer">R$ 30 - 100</label>
+                        <label htmlFor="30" className="me-2 pointer">R$ 30 - 100</label>
                     </div>
                     <div className="mb-3 d-flex">
                         <input className="pointer me-2" onChange={e => setPriceValues({ min: 100, max: 300 })} type="checkbox" id="100" />
@@ -90,7 +94,7 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                 <div className="d-flex justify-content-center">
                     <div className="mb-3 d-flex">
                         <input className="pointer me-2" onChange={e => setPriceValues({ min: 300, max: 500 })} type="checkbox" id="300" />
-                        <label htmlFor="300" className="me-1 pointer">R$ 300 - 500</label>
+                        <label htmlFor="300" className="me-2 pointer">R$ 300 - 500</label>
                     </div>
                     <div className="mb-3 d-flex">
                         <input className="pointer me-2" onChange={e => setPriceValues({ min: 500, max: 12000 })} type="checkbox" id="500" />

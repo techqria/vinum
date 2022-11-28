@@ -4,11 +4,14 @@ import api from "../../api/api";
 import { WineDto } from "../../dto/wine.dto";
 import { UploadImageToS3 } from "../../utils/functionS3";
 
+
 export const ChangeProduct = () => {
 
     const navigate = useNavigate();
 
     const [wines, setWines] = useState<WineDto[]>([]);
+
+    const [orderedByName, setOrderedByName] = useState<WineDto[]>([]);
 
     const [currentWine, setCurrentWine] = useState<WineDto>({
         _id: '', name: '', price: '', sale: '', category: '', country: '', vol: '', grapes: '',
@@ -17,9 +20,13 @@ export const ChangeProduct = () => {
 
     const [selectedFile, setSelectedFile] = useState<File>();
 
+
     useEffect(() => {
         api.get('/wine/listAll')
-            .then(response => setWines(response.data))
+            .then(response => {
+                console.log(response.data)
+                setOrderedByName(response.data.sort(((a: any, b: any) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))));
+            })
             .catch(e => console.error(e))
     }, [])
 
@@ -46,9 +53,9 @@ export const ChangeProduct = () => {
         console.log(selectedFile)
         console.log(currentWine.image)
         let urlImage;
-        if (selectedFile){
-        urlImage = await UploadImageToS3(selectedFile)
-        } else{
+        if (selectedFile) {
+            urlImage = await UploadImageToS3(selectedFile)
+        } else {
             urlImage = currentWine.image
         }
         currentWine.image = urlImage
@@ -74,7 +81,7 @@ export const ChangeProduct = () => {
                                 <select id="id" onChange={e => setWine(e)} className="form-control bg-dark text-white">
                                     <option key="default" value="default">Selecionar</option>
                                     {
-                                        wines.map(wine => (
+                                        orderedByName.map(wine => (
                                             <option key={wine._id} value={wine._id}>{wine.name}</option>
                                         ))
                                     }
@@ -126,6 +133,8 @@ export const ChangeProduct = () => {
                                     <option value="destilados">Destilados</option>
                                     <option value="champagnes & espumantes">Champagnes & Espumantes</option>
                                     <option value="fortificados">Fortificados</option>
+                                    <option value="organicos e veganos">Orgânicos e Veganos</option>
+
                                 </select>
                             </div>
                         </div>
@@ -156,17 +165,25 @@ export const ChangeProduct = () => {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
+                                <label htmlFor="" className="form-label text-white">Volume</label>
+                                <input id="vol" value={currentWine?.vol} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Selecionar Imagem</label>
                                 <input id="image" onChange={handleImage} type="file" className="form-control bg-dark text-white" />
                             </div>
                         </div>
+                    </div>
+
+                    <div className="row">
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Descrição</label>
                                 <textarea id="description" value={currentWine?.description} required onChange={e => setWine(e)} className="form-control bg-dark text-white" ></textarea>
                             </div>
                         </div>
-
                     </div>
 
                     <div className="mt-4 mb-3 d-flex justify-content-center">

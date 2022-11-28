@@ -68,7 +68,7 @@ export default function SidebarMobile({ scroll, color }) {
                             <a className="nav-link text-white" target="_blank" href="https://instagram.com/vinum_wineeventos?igshid=YmMyMTA2M2Y=">Instagram</a>
                         </li>
                         <li className="nav-item">
-                            <input placeholder="Buscar por vinho" className="form-control bg-transparent text-white" type="search" name="search" onChange={searchWine} />
+                            <input placeholder="Buscar produto" className="form-control bg-transparent text-white" type="search" name="search" onChange={searchWine} />
                             <a className={wineFound.name.length > 0 ? 'd-block text-white mt-2 bg-opacity ps-2 pe-2 pt-1 pb-1' : 'd-none'} href={`/inside/${wineFound?.id}`}>{wineFound?.name}</a>
                         </li>
                     </ul>
