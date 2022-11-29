@@ -354,3 +354,7 @@ body {
 .mh-300 {
   max-height: 300px;
 }
+
+#labelFilter{
+  margin-top: 0.85rem;
+}

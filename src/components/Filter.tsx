@@ -33,8 +33,7 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
 
     }, [priceValues])
 
-
-
+    
     return (
         <div className="d-flex flex-column gap-3 align-items-center w-100">
             <div className="d-flex flex-md-row flex-column justify-content-center border gap-3 p-2 border-gold rounded w-content  pt-3">
@@ -43,35 +42,34 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                 </div>
                 <div className="d-flex justify-content-center">
                     <div className="mb-3 d-flex">
-                        <input checked={categoryFilter == 'branco' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="branco" />
-                        <label htmlFor="branco" className="me-1 pointer">Brancos</label>
-
+                        <input  checked={categoryFilter.find((category: string) => category === 'branco')   ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="branco" />
+                        <label htmlFor="branco" className="me-2  pointer">Brancos</label>
                     </div>
                     <div className="mb-3 d-flex">
-                        <input checked={categoryFilter == 'rose' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="rose" />
+                        <input checked={categoryFilter.find((category: string) => category === 'rose') ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="rose" />
                         <label htmlFor="rose" className="me-1 pointer">Rosés</label>
                     </div>
                     <div className="mb-3 d-flex">
-                        <input checked={categoryFilter == 'tinto' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="tinto" />
+                        <input checked={categoryFilter.find((category: string) => category === 'tinto') ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="tinto" />
                         <label htmlFor="tinto" className="me-1 pointer">Tintos</label>
                     </div>
                 </div>
                 <div className="d-flex justify-content-center">
                     <div className="mb-3 d-flex">
-                        <input checked={categoryFilter == 'destilado' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="destilado" />
+                        <input checked={categoryFilter.find((category: string) => category === 'destilado') ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="destilado" />
                         <label htmlFor="destilado" className="me-1 pointer">Destilados</label>
                     </div>
                 </div>
                 <div className="mb-3 d-flex justify-content-center">
-                    <input checked={categoryFilter == 'champagnes & espumantes' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="champagnes & espumantes" />
+                    <input checked={categoryFilter.find((category: string) => category === 'champagnes & espumantes') ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="champagnes & espumantes" />
                     <label htmlFor="champagnes & espumantes" className="me-1 pointer">Champagnes & Espumantes</label>
                 </div>
                 <div className="mb-3 d-flex justify-content-center">
-                    <input checked={categoryFilter == 'fortificado' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="fortificado" />
+                    <input checked={categoryFilter.find((category: string) => category === 'fortificado') ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="fortificado" />
                     <label htmlFor="fortificados" className="me-1 pointer">Fortificados</label>
                 </div>
                 <div className="mb-3 d-flex justify-content-center">
-                    <input checked={categoryFilter == 'organicos e veganos' ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="organicos e veganos" />
+                    <input checked={categoryFilter.find((category: string) => category === 'organicos e veganos') ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="organicos e veganos" />
                     <label htmlFor="organicos e veganos" className="me-1 pointer">Orgânicos e Veganos</label>
                 </div>
             </div>
