@@ -23,9 +23,17 @@ export const Wine = ({ wineId }: any) => {
                 <div className="col-md-6">
                     <div className="d-flex align-items-center justify-content-center">
                         <img className="mw-240 mh-300 me-4" src={wine.image} alt="garrafaVinho.svg" />
+
                         <div className="d-flex flex-column">
-                            <h3 className='text-center text-decoration-line-through mb-1'>De R${wine.price}</h3>
-                            <p className="text-center">Por R$ {(wine.sale)}</p>
+                            {
+                                wine.sale == wine.price ?
+                                    <h3 className='text-center mb-1'>R${wine.price}</h3>
+                                    :
+                                    <div>
+                                        <h3 className='text-center text-decoration-line-through mb-1'>De R${wine.price}</h3>
+                                        <p className="text-center">Por R$ {(wine.sale)}</p>
+                                    </div>
+                            }
                             <a target="_blank" href={`https://api.whatsapp.com/send?phone=5561996851375&text=Olá, tenho interesse no produto ${wine.name}\n vinumeventos.com.br/inside/${wine._id}`} className="btn btn-gold">COMPRAR</a>
                         </div>
                     </div>
@@ -65,7 +73,7 @@ export const Wine = ({ wineId }: any) => {
                                     <p className="fw-bold mb-0">Uva(s)</p>
                                     <p>{wine.grapes}</p>
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </div>
