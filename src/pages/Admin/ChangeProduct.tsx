@@ -94,7 +94,7 @@ export const ChangeProduct = () => {
                         <div className="col-md-6">
                             <div className="mb-3">
                                 <label htmlFor="" className="form-label text-white">Nome</label>
-                                <input id="name" maxLength={35} value={currentWine?.name} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
+                                <input id="name" value={currentWine?.name} required onChange={e => setWine(e)} type="text" className="form-control bg-dark text-white" />
                             </div>
                         </div>
                         <div className="col-md-6">
