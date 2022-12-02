@@ -72,6 +72,10 @@ export const Filter: React.FC<any> = ({ categoryFilter, setCategoryFilter, setPr
                     <input checked={categoryFilter.find((category: string) => category === 'organicos e veganos') ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="organicos e veganos" />
                     <label htmlFor="organicos e veganos" className="me-1 pointer">Orgânicos e Veganos</label>
                 </div>
+                <div className="mb-3 d-flex justify-content-center">
+                    <input checked={categoryFilter.find((category: string) => category === 'zero alcool') ? true : false} className="pointer me-2" onChange={filterCategory} type="checkbox" id="zero alcool" />
+                    <label htmlFor="zero alcool" className="me-1 pointer">Zero Álcool</label>
+                </div>
             </div>
 
             <div className="d-flex flex-md-row flex-column justify-content-center border gap-3 p-2  border-gold rounded w-content pt-3">

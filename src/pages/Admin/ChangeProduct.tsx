@@ -134,7 +134,7 @@ export const ChangeProduct = () => {
                                     <option value="champagnes & espumantes">Champagnes & Espumantes</option>
                                     <option value="fortificados">Fortificados</option>
                                     <option value="organicos e veganos">Orgânicos e Veganos</option>
-
+                                    <option value="zero alcool">Zero Álcool</option>
                                 </select>
                             </div>
                         </div>
