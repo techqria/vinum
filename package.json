@@ -56,5 +56,8 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.14"
-  }
+  },
+  "proxy": {
+      "*":{ "target" : "https://vinum-api.vercel.app"}
+   }
 }
