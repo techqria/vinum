@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://vinumeventos.netlify.app",
+  baseURL: "https://vinum-api.vercel.app",
   headers: {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
