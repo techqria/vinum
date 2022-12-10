@@ -13,7 +13,7 @@ export const Menu: React.FC<any> = ({ older }) => {
                     <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo.jpg" className="card-img" alt="..." /></Link>
                 </div>
                 <div className="card bg-dark text-white">
-                    <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo3.jpg" className="card-img" alt="..." /></Link>
+                    <Link to="/catalogo"><img src="https://vinum-wine.s3.amazonaws.com/Catalogo/catalogo2.jpg" className="card-img" alt="..." /></Link>
                 </div>
             </div>
 
