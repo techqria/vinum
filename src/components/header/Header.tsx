@@ -5,7 +5,7 @@ export default function Header() {
         <>
             <section className="pt-5 pb-5 bg-header text-white">
                 <div className="container d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
-                    <p className="fs-2 mt-5 pt-5 pb-5 text-center fw-light fst-italic">Pensando em <b>você</b>, oferecemos os {'/n'} melhores vinhos com os menores preços.</p>
+                    <p className="fs-2 mt-5 pt-5 pb-5 text-center fw-light fst-italic">Pensando em <b>você</b>, oferecemos os {'\n'} melhores vinhos com os menores preços.</p>
                 </div>
             </section>
 
