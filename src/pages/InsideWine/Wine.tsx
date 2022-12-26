@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../../api/api";
 import { WineDto } from "../../dto/wine.dto";
-import { Text, StyleSheet } from "react-native";
 
 export const Wine = ({ wineId }: any) => {
 
@@ -86,7 +85,7 @@ export const Wine = ({ wineId }: any) => {
                 <div className="col-md-12">
                     <div className=" pt-4 pb-4">
                         <h1 className="pb-2 position-relative">Descrição</h1>
-                        <Text className="mt-4">{wine.description}</Text>
+                        <text className="mt-4">{wine.description}</text>
                     </div>
                 </div>
             </div>
