@@ -28,7 +28,7 @@ export const NewProduct = () => {
         if (e.target.id == 'price') setSale(e.target.value)
 
         setNewWine(wine);
-        console.log(e.target)
+        console.log(e.target.description)
     }
 
     async function addWine(e: any) {
