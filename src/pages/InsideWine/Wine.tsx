@@ -9,12 +9,17 @@ export const Wine = ({ wineId }: any) => {
         vol: '', grapes: '', alcohol: '', description: '', image: '', year: ''
     })
 
+    const [descriptionText, setDescriptionText] = useState<string[]>([])
+
     useEffect(() => {
         api.get(`/wine/find/${wineId}`)
             .then((response) => setWine(response.data))
             .catch(err => console.error("ops! ocorreu um erro" + err));
     }, []);
 
+    useEffect(() => {
+        setDescriptionText(wine.description.split("/n"))
+    }, [wine]);
 
     return (
         <section className="container text-center">
@@ -85,7 +90,13 @@ export const Wine = ({ wineId }: any) => {
                 <div className="col-md-12">
                     <div className=" pt-4 pb-4">
                         <h1 className="pb-2 position-relative">Descrição</h1>
-                        <text className="mt-4">{wine.description}</text>
+                            {
+                            
+                            descriptionText.map(text => {
+                                return <p>{text}</p>
+                            })
+
+                            }
                     </div>
                 </div>
             </div>
